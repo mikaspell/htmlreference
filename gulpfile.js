@@ -9,12 +9,15 @@ var gulp = require('gulp'),
   cleaner = require('rimraf'),
   sequence = require('gulp-sequence'),
   bower = require('main-bower-files'),
+  fs = require('fs'),
+  rename = require('gulp-rename'),
   path = {
     src: {
-      html: 'resources/views/*.pug',
+      html: 'resources/views/pages/**/*.pug',
       css: 'resources/styles/style.scss',
       js: 'resources/scripts/*.js',
-      img: 'resources/images/**/*.*'
+      img: 'resources/images/**/*.*',
+      tags: 'resources/data/tags.json'
     },
     watch: {
       html: 'resources/views/**/*.pug',
@@ -47,12 +50,34 @@ gulp.task('clean', function (cb) {
 
 // Запуск компиляции HTML
 gulp.task('html', function() {
-  gulp.src(path.src.html)
+
+  const tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
+
+  return gulp.src(path.src.html)
     .pipe(plumber())
     .pipe(pug({
-      pretty: true
+      pretty: true,
+      data: {tags: tags}
     }))
     .pipe(gulp.dest(path.build.html));
+});
+
+gulp.task('tags_page', function () {
+
+  var tags = JSON.parse(fs.readFileSync(path.src.tags)).tags,
+    tag;
+
+  for (tag in tags) {
+    gulp.src('resources/views/pages/tag.pug')
+      .pipe(pug({
+        pretty: true,
+        data: tags[tag]
+      }))
+      .pipe(rename({
+        basename: tags[tag].name
+      }))
+      .pipe(gulp.dest(path.build.html + '/tags'));
+  }
 });
 
 // Запуск компиляции CSS
@@ -109,8 +134,8 @@ gulp.task('copy', function () {
 // Наблюдение за изменением файлов
 gulp.task('default', ['localserver'], function() {
 
-  watch([path.watch.html], function(event, cb) {
-    gulp.start('html');
+  watch([path.watch.html, path.src.tags], function(event, cb) {
+    gulp.start(['html', 'tags_page']);
   });
   watch([path.watch.css], function(event, cb) {
     gulp.start('css');
@@ -124,4 +149,4 @@ gulp.task('default', ['localserver'], function() {
 });
 
 // Выполнение всех тасков по порядку
-gulp.task('build', sequence('clean', ['html', 'css'], 'js', 'image', 'vendors', 'copy'));
+gulp.task('build', sequence('clean', ['html', 'tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
