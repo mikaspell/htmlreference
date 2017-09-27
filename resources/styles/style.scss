@@ -1,0 +1,165 @@
+/* Skeleton Base files. */
+@import "../bower_components/Skeleton-Sass/scss/base/variables";
+@import "../bower_components/Skeleton-Sass/scss/base/functions";
+@import "../bower_components/Skeleton-Sass/scss/base/base-styles";
+@import "../bower_components/Skeleton-Sass/scss/base/utils";
+@import "../bower_components/Skeleton-Sass/scss/base/typography";
+
+/* Skeleton Modules */
+@import "../bower_components/Skeleton-Sass/scss/modules/grid";
+@import "../bower_components/Skeleton-Sass/scss/modules/buttons";
+@import "../bower_components/Skeleton-Sass/scss/modules/forms";
+@import "../bower_components/Skeleton-Sass/scss/modules/lists";
+@import "../bower_components/Skeleton-Sass/scss/modules/code";
+@import "../bower_components/Skeleton-Sass/scss/modules/tables";
+@import "../bower_components/Skeleton-Sass/scss/modules/spacing";
+@import "../bower_components/Skeleton-Sass/scss/modules/media-queries";
+
+@import "partials/system/fonts";
+
+// Демо стили
+
+//body {
+//  font-family: 'UbuntuRegular', sans-serif;
+//}
+//.wrapper {
+//  width: 500px;
+//  margin: 150px auto 0;
+//  text-align: center;
+//}
+//h1 {
+//  font-size: 32px;
+//}
+//a {
+//  color: red;
+//  img, span {
+//    display: inline-block;
+//    vertical-align: middle;
+//  }
+//  &:hover span, &:focus span {
+//    text-decoration: underline;
+//  }
+//}
+
+.banner-zone {
+
+  background: $light-grey;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.all-tag-table {
+
+  border-spacing: 0;
+
+  td {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    color: darken($light-grey, 10%);
+
+    &:first-of-type {
+      width: 70%;
+    }
+
+    &:last-of-type {
+      text-align: right;
+    }
+
+    a {
+
+      font-size: 1.2em;
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background-color: darken(#fff, 1%);
+    }
+
+    tr:hover, tbody tr:focus {
+      background-color: darken(#fff, 2%);
+    }
+  }
+}
+
+table {
+
+  &.centered {
+
+    th, td {
+
+      text-align: center;
+    }
+  }
+
+  &.table {
+
+    &--attrs {
+
+      td:first-of-type {
+        width: 30%;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 1.1;
+      }
+    }
+
+    &--refs {
+
+      th {
+        padding-top: 0;
+      }
+
+      td:first-of-type {
+        width: 40%;
+      }
+
+      tbody td {
+        font-size: 13px;
+      }
+
+      tbody tr:first-of-type td {
+        padding-top: 0;
+      }
+    }
+  }
+
+  th {
+    .fa {
+      margin-right: 7px;
+    }
+  }
+}
+
+.required {
+  display: inline-block;
+  width: 17px;
+  height: 15px;
+  background-color: red;
+  vertical-align: text-bottom;
+  margin-left: 5px;
+  border-radius: $global-radius;
+  position: relative;
+
+  &:before {
+
+    position: absolute;
+    top: -1px;
+    left: 4px;
+    font-size: 13px;
+    font-weight: 200;
+    color: #fff;
+    content: 'R';
+  }
+}
+
+code {
+
+  &.attribute {
+
+    background-color: #9cff83;
+  }
+}
