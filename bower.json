@@ -25,7 +25,8 @@
     "jquery": ">=1.12 <2.0",
     "normalize-css": "^4.2.0",
     "respond": "^1.4.2",
-    "html5shiv": "^3.7.3"
+    "html5shiv": "^3.7.3",
+    "Skeleton-Sass": "WhatsNewSaes/Skeleton-Sass"
   },
   "group": {
     "css": [
