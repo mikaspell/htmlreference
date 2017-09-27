@@ -1,0 +1,19 @@
+//- Created by MikaSpell on 16.01.17.
+doctype html
+html(lang="ru")
+  head
+    block title
+      title Стандартный заголовок
+    include ../partials/system/styles
+    include ../partials/system/ie
+
+  body
+    header.banner-zone
+      .container
+        img.logo(src="/img/logo.png" title="htmlreference.ru" alt="htmlreference.ru")
+        p Простой справочник по html
+    main
+      .container
+
+        block content
+    include ../partials/system/scripts

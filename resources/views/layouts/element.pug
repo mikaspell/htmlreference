@@ -1,0 +1,21 @@
+//- Created by MikaSpell on 26.04.17.
+
+doctype html
+html(lang="ru")
+  head
+    block title
+      title Стандартный заголовок
+    include ../partials/system/styles
+    include ../partials/system/ie
+    script(src="https://use.fontawesome.com/c6fb9e59a4.js")
+
+  body
+    header.banner-zone
+      .container
+        //- img.logo(src="/img/logo.png" title="htmlreference.ru" alt="htmlreference.ru")
+        block h1
+    main
+      .container
+        block content
+
+    include ../partials/system/scripts

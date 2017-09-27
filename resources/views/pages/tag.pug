@@ -1,0 +1,93 @@
+//- Created by MikaSpell on 26.04.17.
+
+extends ../layouts/element
+
+block title
+  title= 'Тег <'+ name +'>'
+
+block h1
+  if(self_closing)
+    - var closing_type = 'одинарные'
+  else
+    - var closing_type = 'парные'
+  h1= 'Тег <'+ name +'>'
+  p= 'Категория: '+ category +', Тип: '+ type +', Вид: '+ closing_type
+
+block content
+  p
+  .row
+    .eight.columns
+      if(description)
+        h5 Описание:
+        p= description
+    .four.columns
+      if(refs)
+        h5 Стандарты:
+        table.u-full-width.table--refs
+          //thead
+          //  tr
+          //    th Ресурс
+          //    th Статус
+          tbody
+            each ref in refs
+              if(ref.status === "LS")
+                - var ref_status = 'Текущий стандарт'
+              else if(ref.status === "RC")
+                - var ref_status = 'Рекомендация'
+              tr
+                td: a(href= ref.link target="_blank")= ref.name
+                td
+                  span= ref.status +' '
+                  span (#{ref_status})
+
+  if(example)
+    h5 Пример:
+    pre
+      code= example
+
+  if (attributes)
+    h5 Атрибуты:
+    table.u-full-width.table--attrs
+      each attr in attributes
+        tr
+          td
+            strong(style=attr.required ? "color:red" : none)= attr.name
+            if(attr.required)
+              span.required(title="Обязательный атрибут!")
+            if(attr.description)
+              p= attr.description
+          td
+            if(attr.examples)
+              each example in attr.examples
+                div
+                  if(example.title)
+                    span &equals;
+                    code.attribute= example.title
+                  else
+                    hr
+                  p!= example.description
+
+  if(browsers)
+    h5 Поддержка браузерами:
+    table.u-full-width.centered
+      thead
+        tr
+          th
+            i.fa.fa-internet-explorer
+            | IE
+          th
+            i.fa.fa-chrome
+            | Chrome
+          th
+            i.fa.fa-firefox
+            | Firefox
+          th
+            i.fa.fa-safari
+            | Safari
+          th
+            i.fa.fa-opera
+            | Opera
+      tbody
+        tr
+          each browser in browsers
+            td= browser

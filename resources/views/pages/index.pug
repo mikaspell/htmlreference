@@ -1,0 +1,39 @@
+//- Created by MikaSpell on 16.01.17.
+
+extends ../layouts/base
+
+block title
+  title htmlreference.ru - Простой справочник по html
+
+block content
+  section#tags
+    h3 Теги
+    .row
+      .two.columns
+        input(type="checkbox" id="basic-tags" value="Базовые" name="types" checked)
+        label(for="basic-tags") Базовые
+      .two.columns
+        input(type="checkbox" id="form-tags" value="Формы" name="types" checked)
+        label(for="form-tags") Формы
+      .two.columns
+        input(type="checkbox" id="list-tags" value="Списки" name="types" checked)
+        label(for="list-tags") Списки
+      .two.columns
+        input(type="checkbox" id="semantic-tags" value="Семантические" name="types" checked)
+        label(for="semantic-tags") Семантические
+      .two.columns
+        input(type="checkbox" id="table-tags" value="Табличные" name="types" checked)
+        label(for="table-tags") Табличные
+    table.u-full-width.all-tag-table
+      tbody
+        each tag in tags
+          tr("data-url"='/tags/'+ tag.name +'.html' "data-category"= tag.category title= tag.description)
+            td
+              a(href='/tags/'+ tag.name + '.html')= tag.name
+            td= tag.category
+            td= tag.type
+            if (tag.self_closing)
+              td одинарный
+            else
+              td парный
+
