@@ -25,15 +25,20 @@
   "homepage": "https://github.com/mikaspell/htmlreference#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
     "gulp-watch": "^4.3.11",
     "gulp-webserver": "^0.9.1",
+    "gulp-yaml": "^1.0.1",
+    "gulp-yaml-data": "^0.2.0",
     "imagemin-pngquant": "^5.0.0",
     "main-bower-files": "^2.13.1",
+    "merge-stream": "^1.0.1",
     "rimraf": "^2.5.4"
   }
 }
