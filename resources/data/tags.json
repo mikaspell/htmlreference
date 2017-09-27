@@ -1,0 +1,108 @@
+{
+  "tags": [
+    {
+      "name": "a",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "Элемент <a> является одним из важных в HTML и предназначен для создания ссылок. Для этого необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута href используется адрес документа, на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.",
+      "example": "<a href='http://htmlreference.ru'>htmlreference.ru</a>",
+      "browsers": {
+        "ie": 1,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 1.3
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-a-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element",
+          "status": "RC"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.2",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "href",
+          "required": true,
+          "description": "Содержит ссылку на цель",
+          "examples": [
+            {
+              "title": "http://htmlreference.ru",
+              "description": "Можно указывать абсолютные ссылки",
+              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "/tags/a.html",
+              "description": "Можно указывать относительные ссылки",
+              "example": "<a href='/tags/a.html'>Описание тега a</a>"
+            },
+            {
+              "title": "#footer",
+              "description": "Можно указывать ссылку на определенный элемент страницы",
+              "example": "<a href='#footer'>Footer</a>"
+            },
+            {
+              "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "required": false,
+          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+          "examples": [
+            {
+              "title": "_blank",
+              "description": "Opens in a new browsing context, which is usually a new tab.",
+              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "abbr",
+      "category": "базовые",
+      "type": "строчный",
+      "self_closing": false,
+      "description": "Defines an abbreviation, and usually includes its full description.",
+      "example": "<abbr>NATO</abbr>",
+      "attributes": [
+        {
+          "name": "title",
+          "required": false,
+          "description": "Displays the full description when hovering the element.",
+          "examples": ""
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "category": false,
+      "type": "блочный"
+    },
+    {
+      "name": "area"
+    },
+    {
+      "name": "article"
+    },
+    {
+      "name": "aside"
+    },
+    {
+      "name": "audio"
+    }
+  ]
+}
