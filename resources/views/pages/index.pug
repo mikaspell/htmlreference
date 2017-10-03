@@ -27,13 +27,13 @@ block content
     table.u-full-width.all-tag-table
       tbody
         each tag in tags
-          tr("data-url"='/tags/'+ tag.name +'.html' "data-category"= tag.category title= tag.description)
+          tr("data-url"='/tags/'+ tag.name +'.html' "data-category"= tag.category)
             td
               a(href='/tags/'+ tag.name + '.html')= tag.name
             td= tag.category
             td= tag.type
             if (tag.self_closing)
-              td одинарный
+              td одинарные
             else
-              td парный
+              td парные
 
