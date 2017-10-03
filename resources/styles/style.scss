@@ -158,8 +158,23 @@ table {
 
 code {
 
+  overflow-x: scroll;
+
   &.attribute {
 
     background-color: #9cff83;
+    margin: 0 5px;
+  }
+}
+
+.attribute {
+
+  &-default {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+
+  &-example {
+    margin-top: 0.5rem;
   }
 }
