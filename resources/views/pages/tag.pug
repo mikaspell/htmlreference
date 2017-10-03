@@ -19,7 +19,7 @@ block content
     .eight.columns
       if(description)
         h5 Описание:
-        p= description
+        div!= description
     .four.columns
       if(refs)
         h5 Стандарты:
@@ -34,6 +34,12 @@ block content
                 - var ref_status = 'Текущий стандарт'
               else if(ref.status === "RC")
                 - var ref_status = 'Рекомендация'
+              else if(ref.status === "CR")
+                - var ref_status = "Возможная рекомендация"
+              else if(ref.status === "PR")
+                - var ref_status = "Предлагаемая рекомендация"
+              else if(ref.status === "WD")
+                - var ref_status = "Рабочий черновик"
               tr
                 td: a(href= ref.link target="_blank")= ref.name
                 td
@@ -51,11 +57,13 @@ block content
       each attr in attributes
         tr
           td
-            strong(style=attr.required ? "color:red" : none)= attr.name
-            if(attr.required)
+            strong(style=attr.required && attr.required !== "empty" ? "color:red" : none)= attr.name
+            if(attr.required && attr.required !== "empty")
               span.required(title="Обязательный атрибут!")
             if(attr.description)
               p= attr.description
+            if(attr.required === "empty")
+              p.attribute--empty Значение не указывается
           td
             if(attr.examples)
               each example in attr.examples
@@ -63,9 +71,11 @@ block content
                   if(example.title)
                     span &equals;
                     code.attribute= example.title
+                    if(example.default)
+                      span.attribute-default (Значение по умолчанию)
                   else
                     hr
-                  p!= example.description
+                  p.attribute-example!= example.description
 
   if(browsers)
     h5 Поддержка браузерами:
