@@ -5,7 +5,7 @@
       "category": "базовые",
       "type": "строчные",
       "self_closing": false,
-      "description": "Элемент <a> является одним из важных в HTML и предназначен для создания ссылок. Для этого необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута href используется адрес документа, на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.",
+      "description": "Элемент &lt;a&gt; является одним из важных в HTML и предназначен для создания ссылок. Для этого необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута href используется адрес документа, на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.",
       "example": "<a href='http://htmlreference.ru'>htmlreference.ru</a>",
       "browsers": {
         "ie": 1,
@@ -64,8 +64,24 @@
           "examples": [
             {
               "title": "_blank",
-              "description": "Opens in a new browsing context, which is usually a new tab.",
+              "description": "Открывает ссылку в новой вкладке браузера.",
               "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_self",
+              "description": "Открывает ссылку в текущей вкладке.",
+              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+              "default": true
+            },
+            {
+              "title": "_parent",
+              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_top",
+              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
             }
           ]
         }
@@ -74,35 +90,349 @@
     {
       "name": "abbr",
       "category": "базовые",
-      "type": "строчный",
+      "type": "строчные",
       "self_closing": false,
-      "description": "Defines an abbreviation, and usually includes its full description.",
+      "description": "Элемент &lt;abbr&gt; указывает, что последовательность символов является аббревиатурой. С помощью атрибута <code>title</code> даётся расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы. Кроме того, поисковые системы индексируют полнотекстовый вариант сокращения, это может использоваться для повышения рейтинга документа.",
       "example": "<abbr>NATO</abbr>",
-      "attributes": [
+      "browsers": {
+        "ie": 7,
+        "ch": 2,
+        "ff": 1,
+        "sa": 1,
+        "op": 1.3
+      },
+      "refs": [
         {
-          "name": "title",
-          "required": false,
-          "description": "Displays the full description when hovering the element.",
-          "examples": ""
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-abbr-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element",
+          "status": "CR"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#edef-ABBR",
+          "status": "RC"
         }
       ]
     },
     {
       "name": "address",
-      "category": false,
-      "type": "блочный"
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;address&gt; предназначен для хранения контактной информации автора (адрес, телефон, e-mail, ссылка на сайт и др.) и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т. д. Планируется, что поисковые системы будут анализировать содержимое этого элемента для сбора информации об авторах.</p><p>&lt;address&gt; не должен использоваться для разметки почтовых адресов в целом, только для контактной информации.</p><p>Используйте &lt;address&gt; в следующем контексте:<ul><li>если &lt;address&gt; располагается внутри <a href='/tags/body.html'>&lt;body&gt;</a>, то информация внутри &lt;address&gt; относится ко всему документу в целом;</li><li>если &lt;address&gt; располагается внутри <a href='/tags/article.html'>&lt;article&gt;</a>, то информация внутри &lt;address&gt; относится к автору статьи.</li></ul></p>",
+      "example": "<address>Текст</address>",
+      "browsers": {
+        "ie": 1,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 5.12
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-address-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/sections.html#the-address-element",
+          "status": "PR"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.6",
+          "status": "RC"
+        }
+      ]
     },
     {
-      "name": "area"
+      "name": "area",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": true,
+      "description": "<p>Каждый элемент &lt;area&gt; определяет активные области изображения, которые являются ссылками. Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку. &lt;area&gt; всегда располагается в контейнере <a href='/tags/map.html'>&lt;map&gt;</a>, который связывает координаты областей с изображением.</p><p>Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</p>",
+      "example": "<map id='australia'>\n  <area title='Australia' href='https://en.wikipedia.org/wiki/Australia_(continent)' shape='poly' coords='257,107,263,85,314,89,316,137,294,151,249,132,248,114'>\n</map>",
+      "browsers": {
+        "ie": 1,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element",
+          "status": "RC"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "title",
+          "description": "Содержит описание области.",
+          "examples": [
+            {
+              "title": "Москва",
+              "description": "Описание области отображается при наведении на область."
+            }
+          ]
+        },
+        {
+          "name": "shape",
+          "description": "Содержит определение формы области.",
+          "examples": [
+            {
+              "title": "rect",
+              "description": "Форма области представляет из себя прямоугольник и требует 4 координаты.",
+              "default": true
+            },
+            {
+              "title": "circle",
+              "description": "Форма области представляет из себя окружность и требует 2 координаты и 1 радиус."
+            },
+            {
+              "title": "polygon",
+              "description": "Форма области представляет из себя многоугольник с неограниченным количеством координат."
+            }
+          ]
+        },
+        {
+          "name": "coords",
+          "description": "Содержит координаты формы области",
+          "examples": [
+            {
+              "title": "12,233,67,31",
+              "description": "Форма <code>rect</code> требует 2 пары координат, где первая пара это координаты левой верхней точки области, а вторая пара - нижний правый угол."
+            },
+            {
+              "title": "65,37,12",
+              "description": "Форма <code>circle</code> требует пару координат и радиус. Координаты указывают на центр окружности."
+            },
+            {
+              "title": "123,213,333,123,12,32,142,345",
+              "description": "Форма <code>polygon</code> требует неограниченное количество пар координат."
+            }
+          ]
+        },
+        {
+          "name": "href",
+          "description": "Содержит ссылку на цель",
+          "examples": [
+            {
+              "title": "http://htmlreference.ru",
+              "description": "Можно указывать абсолютные ссылки",
+              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "/tags/a.html",
+              "description": "Можно указывать относительные ссылки",
+              "example": "<a href='/tags/a.html'>Описание тега a</a>"
+            },
+            {
+              "title": "#footer",
+              "description": "Можно указывать ссылку на определенный элемент страницы",
+              "example": "<a href='#footer'>Footer</a>"
+            },
+            {
+              "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "required": false,
+          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+          "examples": [
+            {
+              "title": "_blank",
+              "description": "Открывает ссылку в новой вкладке браузера.",
+              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_self",
+              "description": "Открывает ссылку в текущей вкладке.",
+              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+              "default": true
+            },
+            {
+              "title": "_parent",
+              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_top",
+              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "article"
+      "name": "article",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Определяет автономный блок контента, который может использоваться в любом контексте. Используется как элемент списка новостей, статей, записей блога, комментариев и др.</p>",
+      "example": "<article>Невероятное проишествие по адресу ул. Пушкина дом Колотушкина.</article>",
+      "browsers": {
+        "ie": 9,
+        "ch": 5,
+        "ff": 4.1,
+        "sa": 4,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-article-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/sections.html#the-article-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/sections.html#the-article-element",
+          "status": "RC"
+        }
+      ]
     },
     {
-      "name": "aside"
+      "name": "aside",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Содержит в себе контент относящийся к основному контенту на странице. Обычно используется как боковая колонка.</p>",
+      "example": "<aside>...</aside>",
+      "browsers": {
+        "ie": 9,
+        "ch": 5,
+        "ff": 4,
+        "sa": 5.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-aside-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/sections.html#the-aside-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "https://www.w3.org/TR/html5/sections.html#the-aside-element",
+          "status": "RC"
+        }
+      ]
     },
     {
-      "name": "audio"
+      "name": "audio",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Позволяет добавлять и управлять аудиозаписями на веб-странице.</p><p>Путь к аудио файлу указывается через аттриут <code>src</code> или через вложенный тег <a href='/tags/source.html'>&lt;source&gt;</a>.</p>",
+      "example": "<audio src='/path/to/unknown.mp3'></audio>",
+      "browsers": {
+        "ie": 9,
+        "ch": 5,
+        "ff": 4,
+        "sa": 4.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-audio-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/semantics-embedded-content.html#elementdef-audio",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "src",
+          "required": true,
+          "description": "Содержит путь к воспроизводимому файлу",
+          "examples": [
+            {
+              "title": "/path/to/unknown.mp3",
+              "description": "Вы можете указывать относительный путь к файлу",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "volume",
+          "description": "Задает громкость воспроизведения аудиофайла. Значения от 0.0 (без звука) до 1.0 (max громкость).",
+          "examples": [
+            {
+              "title": "0.0",
+              "description": "Звук отключен"
+            },
+            {
+              "title": "1.0",
+              "description": "Максимальная громкость"
+            }
+          ]
+        },
+        {
+          "name": "autoplay",
+          "description": "Включает автоматическое воспроизведение аудиозаписи.",
+          "required": "empty"
+        },
+        {
+          "name": "controls",
+          "description": "Включает отображание браузерных кнопок управления аудио.",
+          "required": "empty"
+        },
+        {
+          "name": "loop",
+          "description": "Включает повторение воспроизведения аудиозаписи.",
+          "required": "empty"
+        },
+        {
+          "name": "muted",
+          "description": "При воспроизведении аудиозаписи звук будет отключен по умолчанию.",
+          "required": "empty"
+        },
+        {
+          "name": "preload",
+          "description": "Аудиозапись будет автоматически загружена после загрузки веб-страницы.",
+          "required": "empty"
+        }
+      ]
     }
   ]
 }
