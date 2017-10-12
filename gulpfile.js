@@ -76,7 +76,7 @@ gulp.task('tags_page', function () {
       .pipe(rename({
         basename: tags[tag].name
       }))
-      .pipe(gulp.dest(path.build.html + '/tags'));
+      .pipe(gulp.dest(path.build.html));
   }
 });
 
