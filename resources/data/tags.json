@@ -433,6 +433,306 @@
           "required": "empty"
         }
       ]
+    },
+    {
+      "name": "b",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Устанавливает жирное начертание шрифта.</p>",
+      "example": "<b>... какой-то невероятный текст ...</b>",
+      "browsers": {
+        "ie": 2,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-b-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-b-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "category": "базовые",
+      "type": "-",
+      "self_closing": true,
+      "description": "<p>Указывает базовый url для относительных путей на страничке. Должен находиться в теге <a href='/head'>&lt;head&gt;</a>.</p>",
+      "example": "<head>\n  <base href='http://htmlreference.ru' />\n</head>",
+      "browsers": {
+        "ie": 2,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/document-metadata.html#the-base-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.4",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Содержит ссылку на цель",
+          "examples": [
+            {
+              "title": "http://htmlreference.ru",
+              "description": "Можно указывать абсолютные ссылки",
+              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "required": false,
+          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+          "examples": [
+            {
+              "title": "_blank",
+              "description": "Открывает ссылку в новой вкладке браузера.",
+              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_self",
+              "description": "Открывает ссылку в текущей вкладке.",
+              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+              "default": true
+            },
+            {
+              "title": "_parent",
+              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+            },
+            {
+              "title": "_top",
+              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bdi",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Служит для выделения части текста, которая должна быть изолирована от общего направления вывода текста, т.е. меняет напрвление на обратное. Обычно используется для текстов, содержащих в себе разные языки.</p>",
+      "example": "Слово <bdi>مرحبا</bdi> с Арабского переводится как 'Привет'",
+      "browsers": {
+        "ie": "x",
+        "ed": "x",
+        "ch": 16,
+        "ff": 10,
+        "sa": 7,
+        "op": 15
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdi-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdi-element",
+          "status": "WD"
+        }
+      ]
+    },
+    {
+      "name": "bdo",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Позволяет установить направление вывода текста. Зачастую используется в текстах, где чтение происходит справа налево.</p>",
+      "example": "<bdo dir='ltr'>Какой-то текст</bdo>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdo-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdo-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-bdo-element",
+          "status": "RC"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "https://www.w3.org/TR/html401/struct/dirlang.html#h-8.2.4",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "dir",
+          "required": true,
+          "description": "Указывает в какую сторону должен выводиться текст.",
+          "examples": [
+            {
+              "title": "rtl",
+              "description": "Направление текста справа налево.",
+              "example": ""
+            },
+            {
+              "title": "ltr",
+              "description": "Направление текста слева направо.",
+              "example": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "blockquote",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Используется для выделения внутри текста длинных цитат.</p>",
+      "example": "<blockquote cite='https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back'>I'll be back</blockquote>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-blockquote-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-blockquote-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.2",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "cite",
+          "required": false,
+          "description": "Содержит ссылку на страницу откуда цитируется текст.",
+          "examples": [
+            {
+              "title": "https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back",
+              "description": "Вы можете использовать только действующие ссылки.",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Тег &lt;body&gt; используется для хранения содержимого веб-страницы. Тексты, изображения, теги, скрипты и т.д. должны находится в этом теге.</p><p>Открывающий и закрывающий теги не обязательны, но хорошим тоном будет их использование, чтобы указать начало и конец документа.",
+      "example": "<!DOCTYPE html>\n<html>\n  <head>\n    <!-- Document metadata -->\n  </head>\n  <body>\n    <!-- Document content -->\n  </body>\n</html>",
+      "browsers": {
+        "ie": 1,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 1
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-body-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/sections.html#the-body-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "br",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": true,
+      "description": "<p>Тег &lt;br&gt; устанавливает перевод строки в том месте, где он находится.</p>",
+      "example": "Далеко-далеко за словесными горами в<br> стране гласных и согласных живут рыбные<br> тексты. Вдали от всех живут они в буквенных домах на<br> берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее<br> всеми необходимыми правилами.",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-br-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-br-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.3.2.1",
+          "status": "RC"
+        }
+      ]
     }
   ]
 }
