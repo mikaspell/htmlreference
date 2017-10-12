@@ -27,9 +27,9 @@ block content
     table.u-full-width.all-tag-table
       tbody
         each tag in tags
-          tr("data-url"='/tags/'+ tag.name +'.html' "data-category"= tag.category)
+          tr("data-url"='/'+ tag.name +'.html' "data-category"= tag.category)
             td
-              a(href='/tags/'+ tag.name + '.html')= tag.name
+              a(href='/'+ tag.name + '.html')= tag.name
             td= tag.category
             td= tag.type
             if (tag.self_closing)
