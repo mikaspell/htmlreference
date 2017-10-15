@@ -733,6 +733,220 @@
           "status": "RC"
         }
       ]
+    },
+    {
+      "name": "button",
+      "category": "формы",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Тег &lt;button&gt; позволяет добавлять кнопки на веб-страницу. Является некой аналогией тега &lt;input&gt; с типом submit, button или reset. Отличается от тега &lt;input&gt; большей способностью к кастомизации.</p>",
+      "example": "<button>Отправить</button>",
+      "browsers": {
+        "ie": 4,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 6
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-button-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/sec-forms.html#the-button-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.5",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "description": "Содержит в себе уникальный идентификатор кнопки. При отправке формы дает серверу доступ к значению кнопки.",
+          "examples": [
+            {
+              "title": "submit_form",
+              "description": "Значение name должно быть уникальным в контексте родительской формы. Может состоять из букв, цифр, знака тире и нижнего подчеркивания. Пробелы запрещены.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "required": false,
+          "description": "При отправке формы значение поля value тоже будет отправлено на сервер.",
+          "examples": [
+            {
+              "title": "submitted",
+              "description": "Сервер получит значение submitted.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "required": false,
+          "description": "Определяет тип кнопки.",
+          "examples": [
+            {
+              "title": "submit",
+              "description": "Отправляет данные формы на сервер.",
+              "example": "",
+              "default": true
+            },
+            {
+              "title": "reset",
+              "description": "Сбрасывает все указанные в форме данные.",
+              "example": "",
+              "default": false
+            },
+            {
+              "title": "button",
+              "description": "Ограничивает кнопку на взаимодействие с формами. Можно свободно использовать внутри форм и при нажатии на кнопку форма не отправится.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "required": "empty",
+          "description": "Ограничивает возможность взаимодействия пользователя с кнопкой."
+        },
+        {
+          "name": "autofocus",
+          "required": "empty",
+          "description": "Устанавливает фокус на кнопку после загрузки веб-страницы."
+        }
+      ]
+    },
+    {
+      "name": "canvas",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Создает область, в которой при помощи Javascript можно отрисовывать различную графику.</p>",
+      "example": "<canvas></canvas>",
+      "browsers": {
+        "ie": 9,
+        "ch": 1,
+        "ff": 1.5,
+        "sa": 2,
+        "op": 9
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/scripting.html#the-canvas-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/semantics-scripting.html#the-canvas-element",
+          "status": "WD"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "width",
+          "required": false,
+          "description": "Задает ширину области.",
+          "examples": [
+            {
+              "title": "300",
+              "description": "",
+              "example": "",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "height",
+          "required": false,
+          "description": "Задает высоту области.",
+          "examples": [
+            {
+              "title": "150",
+              "description": "",
+              "example": "",
+              "default": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "caption",
+      "category": "табличные",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Задает заголовок у таблицы. Обязательно должен распологаться сразу после открывающего тега <a href='/table'>table</a>.</p>",
+      "example": "<table>\n  <caption>Название</caption>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 7
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/tabular-data.html#the-caption-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.2",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "cite",
+      "category": "семантические",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Указывает источник цитаты, название какой-то креативной работы и т.д. Нельзя тегом оборачивать имена людей.</p>",
+      "example": "Долго. Дорого. О*уенно. <cite>artlebedev.ru</cite>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 7
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-cite-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-cite-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+          "status": "RC"
+        }
+      ]
     }
   ]
 }
