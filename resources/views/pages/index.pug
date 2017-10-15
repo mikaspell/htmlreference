@@ -8,26 +8,37 @@ block title
 block content
   section#tags
     h3 Теги
-    .row
+    #tag_filter.row
       .two.columns
-        input(type="checkbox" id="basic-tags" value="Базовые" name="types" checked)
+        input(type="checkbox" id="basic-tags" value="basic" name="types" checked)
         label(for="basic-tags") Базовые
       .two.columns
-        input(type="checkbox" id="form-tags" value="Формы" name="types" checked)
+        input(type="checkbox" id="semantic-tags" value="semantic" name="types" checked)
+        label(for="semantic-tags") Семантика
+      .two.columns
+        input(type="checkbox" id="form-tags" value="forms" name="types" checked)
         label(for="form-tags") Формы
       .two.columns
-        input(type="checkbox" id="list-tags" value="Списки" name="types" checked)
+        input(type="checkbox" id="list-tags" value="lists" name="types" checked)
         label(for="list-tags") Списки
       .two.columns
-        input(type="checkbox" id="semantic-tags" value="Семантические" name="types" checked)
-        label(for="semantic-tags") Семантические
-      .two.columns
-        input(type="checkbox" id="table-tags" value="Табличные" name="types" checked)
-        label(for="table-tags") Табличные
+        input(type="checkbox" id="table-tags" value="tables" name="types" checked)
+        label(for="table-tags") Таблицы
     table.u-full-width.all-tag-table
       tbody
         each tag in tags
-          tr("data-url"='/'+ tag.name +'.html' "data-category"= tag.category)
+          if tag.category === 'базовые'
+            - var category = 'basic'
+          else if tag.category === 'семантические'
+            - var category = 'semantic'
+          else if tag.category === 'формы'
+            - var category = 'forms'
+          else if tag.category === 'списки'
+            - var category = 'lists'
+          else if tag.category === 'табличные'
+            - var category = 'tables'
+
+          tr("data-url"='/'+ tag.name +'.html' "data-category"= category)
             td
               a(href='/'+ tag.name + '.html')= tag.name
             td= tag.category

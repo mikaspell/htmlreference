@@ -48,6 +48,26 @@
   padding-bottom: 20px;
 }
 
+#tag_filter {
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+
+  input {
+
+    margin-bottom: 0;
+  }
+
+  label {
+    display: inline;
+    padding-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+
 .all-tag-table {
 
   border-spacing: 0;
@@ -97,8 +117,19 @@ table {
 
     &--attrs {
 
+      border-spacing: 0;
+
+      td {
+
+        padding: 20px 15px;
+      }
+
       td:first-of-type {
         width: 30%;
+      }
+
+      td:nth-child(even) div:last-of-type .attribute-example {
+        margin-bottom: 0;
       }
 
       p {
@@ -176,5 +207,9 @@ code {
 
   &-example {
     margin-top: 0.5rem;
+  }
+
+  &--empty {
+    margin-bottom: 0;
   }
 }
