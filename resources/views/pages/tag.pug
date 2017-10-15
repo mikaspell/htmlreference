@@ -41,7 +41,7 @@ block content
               else if(ref.status === "WD")
                 - var ref_status = "Рабочий черновик"
               tr
-                td: a(href= ref.link target="_blank")= ref.name
+                td: a(href= ref.link target="_blank" rel="nofollow")= ref.name
                 td
                   span= ref.status +' '
                   span (#{ref_status})
