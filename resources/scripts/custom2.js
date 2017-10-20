@@ -21,7 +21,7 @@ document.addEventListener('change', function (e) {
     type = row.getAttribute('data-category');
     if(type === target.value && !target.checked) {
       row.style.display = 'none'
-    } else {
+    } else if (type === target.value && target.checked) {
       row.style.display = '';
     }
   });
