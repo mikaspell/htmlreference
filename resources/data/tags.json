@@ -1195,7 +1195,7 @@
           "examples": [
             {
               "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
-              "description": "Можно использовать только валидный <a href='https://html.spec.whatwg.org/multipage/infrastructure.html#valid-global-date-and-time-string'>формат дат</a>.",
+              "description": "Можно использовать только валидный <a href='https://html.spec.whatwg.org/multipage/infrastructure.html#valid-global-date-and-time-string' rel='nofollow'>формат дат</a>.",
               "example": "",
               "default": false
             }
