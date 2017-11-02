@@ -3,7 +3,7 @@
 extends ../layouts/element
 
 block title
-  title= 'Тег <'+ name +'>'
+  title= 'Тег <'+ name +'> - Простой cправочник по html'
 
 block h1
   if(self_closing)
@@ -104,4 +104,7 @@ block content
       tbody
         tr
           each browser in browsers
-            td= browser
+            if(browser)
+              td= browser
+            else
+              td: i.fa.fa-close(style="color:red")

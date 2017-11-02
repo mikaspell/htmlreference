@@ -1041,6 +1041,77 @@
           ]
         }
       ]
+    },
+    {
+      "name": "data",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Содержит в аттрибуте <code>value</code> данные в машиночитаемом виде, используемом для внешних систем или для скриптов на самом сайте.</p>",
+      "example": "<data value='значение'>...</data>",
+      "browsers": {
+        "ie": false,
+        "ch": false,
+        "ff": 22,
+        "sa": false,
+        "op": false
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-data-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "https://w3c.github.io/html/textlevel-semantics.html#the-data-element",
+          "status": "WD"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "value",
+          "required": true,
+          "description": "Содержит машиночитаемые данные.",
+          "examples": [
+            {
+              "title": "123",
+              "description": "Вы можете указать данные в виде чисел"
+            },
+            {
+              "title": "Company name",
+              "description": "или в виде текстовой строки."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "datalist",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Содержит в себе список данных для автоматических подсказок для текстовых полей <a href='/input.html'>input</a>. Данные в тектовом поле вызываются с помощью аттрибута <code>list</code>.</p>",
+      "example": "<input list='cities'>\n<datalist id='cities'>\n  <option value='Москва'>\n  <option value='Петербург'>\n</datalist>",
+      "browsers": {
+        "ie": 10,
+        "ch": 20,
+        "ff": 4,
+        "sa": false,
+        "op": 9.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "https://w3c.github.io/html/sec-forms.html#the-datalist-element",
+          "status": "WD"
+        }
+      ]
     }
   ]
 }
