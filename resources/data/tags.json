@@ -947,6 +947,100 @@
           "status": "RC"
         }
       ]
+    },
+    {
+      "name": "col",
+      "category": "табличные",
+      "type": "строчные",
+      "self_closing": true,
+      "description": "<p>Элемент задает ширину и другие параметры у одной или нескольких колонок. Возможно использование с тегом <a href='/colgroup.html'>colgroup</a>, который позволяет группировать колонки таблицы с одинаковыми свойствами. Использование тега &lt;col&gt; позволяет браузеру отрисовывать таблицу, не дожидаясь загрузки страницы.</p><p>Для тега &lt;col&gt; для стилезации допустимо использовать только свойства: <strong>border</strong>, <strong>background</strong>, <strong>width</strong> и <strong>visibility</strong>.</p>",
+      "example": "<table>\n  <col background='red'>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
+      "browsers": {
+        "ie": 5,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 4
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/tabular-data.html#the-col-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "http://w3c.github.io/html/tabular-data.html#the-col-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.4.2",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "span",
+          "required": false,
+          "description": "Указывает сколько колонок относятся к указанным параметрам.",
+          "examples": [
+            {
+              "title": "2",
+              "description": "Можно использовать только целые числа.",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "colgroup",
+      "category": "табличные",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p></p>",
+      "example": "",
+      "browsers": {
+        "ie": 1,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 1.3
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.2",
+          "link": "",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "",
+          "required": true,
+          "description": "",
+          "examples": [
+            {
+              "title": "",
+              "description": "",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
