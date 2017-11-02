@@ -1112,6 +1112,96 @@
           "status": "WD"
         }
       ]
+    },
+    {
+      "name": "dd",
+      "category": "списки",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Тег &lt;dd&gt; является в списке описаний элементом, в котором содержится описание термина.</p>",
+      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dd-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-dd-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "del",
+      "category": "семантические",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>С помощью данного тега указывается часть текста, которая по какой-либо причине стала неактуальной, но удалять её нет необходимости. Чаще всего браузеры текст внутри данного тега отобразят как перечеркнутый.</p>",
+      "example": "Для написания аббревиатур используйте тег <del>acronym</del> abbr.",
+      "browsers": {
+        "ie": 4,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-del-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/edits.html#the-del-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.4",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "cite",
+          "description": "Содержит ссылку на документ, где указана причина изменения текста.",
+          "examples": [
+            {
+              "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
+              "description": "Можно использовать только действующие ссылки.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "datetime",
+          "description": "Содержит дату изменения текста.",
+          "examples": [
+            {
+              "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
+              "description": "Можно использовать только валидный <a href='https://html.spec.whatwg.org/multipage/infrastructure.html#valid-global-date-and-time-string'>формат дат</a>.",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
