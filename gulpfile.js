@@ -57,7 +57,10 @@ gulp.task('html', function() {
     .pipe(plumber())
     .pipe(pug({
       pretty: true,
-      data: {tags: tags}
+      data: {
+        tags: tags,
+        time: new Date()
+      }
     }))
     .pipe(gulp.dest(path.build.html));
 });

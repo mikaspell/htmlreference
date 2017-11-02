@@ -5,9 +5,12 @@ extends ../layouts/base
 block title
   title htmlreference.ru - Простой справочник по html
 
+block date
+  #last-edited= 'Последние изменения: '+ time.getDay()+'.'+time.getMonth()+'.'+time.getFullYear()
+
 block content
+  p
   section#tags
-    h3 Теги
     #tag_filter.row
       .two.columns
         input(type="checkbox" id="basic-tags" value="basic" name="types" checked)

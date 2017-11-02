@@ -48,6 +48,10 @@
   padding-bottom: 20px;
 }
 
+main {
+  margin-top: 70px;
+}
+
 #tag_filter {
 
   padding-top: 10px;
@@ -212,4 +216,11 @@ code {
   &--empty {
     margin-bottom: 0;
   }
+}
+
+#last-edited {
+  text-align: center;
+  font-size: 10px;
+  color: darken($light-grey, 10%);
+  margin-top: 100px;
 }
