@@ -103,7 +103,7 @@ block content
       tbody
         tr
           each browser in browsers
-            if(browser)
-              td= browser
-            else
+            if(browser && browser === "x")
               td: i.fa.fa-close(style="color:red")
+            else
+              td= browser

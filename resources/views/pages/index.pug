@@ -6,27 +6,37 @@ block title
   title htmlreference.ru - Простой справочник по html
 
 block date
-  #last-edited= 'Последние изменения: '+ time.getDay()+'.'+time.getMonth()+'.'+time.getFullYear()
+  mixin getTime(time)
+    - var day = time.getDay()
+    - var month = time.getMonth()
+    - var year = time.getFullYear()
+    - var hour = time.getHours()
+    - var minutes = time.getMinutes()
+
+    #last-edited= 'Последние изменения: '+ day +'.'+ month +'.'+ year +', '+ hour +':'+ minutes
+
+  +getTime(time)
 
 block content
   p
   section#tags
-    #tag_filter.row
-      .two.columns
-        input(type="checkbox" id="basic-tags" value="basic" name="types" checked)
-        label(for="basic-tags") Базовые
-      .two.columns
-        input(type="checkbox" id="semantic-tags" value="semantic" name="types" checked)
-        label(for="semantic-tags") Семантика
-      .two.columns
-        input(type="checkbox" id="form-tags" value="forms" name="types" checked)
-        label(for="form-tags") Формы
-      .two.columns
-        input(type="checkbox" id="list-tags" value="lists" name="types" checked)
-        label(for="list-tags") Списки
-      .two.columns
-        input(type="checkbox" id="table-tags" value="tables" name="types" checked)
-        label(for="table-tags") Таблицы
+    #tag_filter
+      .row
+        .two.columns
+          input(type="checkbox" id="basic-tags" value="basic" name="types" checked)
+          label(for="basic-tags") Базовые
+        .two.columns
+          input(type="checkbox" id="semantic-tags" value="semantic" name="types" checked)
+          label(for="semantic-tags") Семантика
+        .two.columns
+          input(type="checkbox" id="form-tags" value="forms" name="types" checked)
+          label(for="form-tags") Формы
+        .two.columns
+          input(type="checkbox" id="list-tags" value="lists" name="types" checked)
+          label(for="list-tags") Списки
+        .two.columns
+          input(type="checkbox" id="table-tags" value="tables" name="types" checked)
+          label(for="table-tags") Таблицы
     table.u-full-width.all-tag-table
       tbody
         each tag in tags
