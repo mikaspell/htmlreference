@@ -1202,6 +1202,114 @@
           ]
         }
       ]
+    },
+    {
+      "name": "details",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Этот тег позволяет создать разворачиваемый блок без использования JS, который содержит в себе краткое описание и подробное.</p>",
+      "example": "<details>\n  <summary>Подробнее</summary>\n  <p>Подробное описание, которое может быть скрыто.</p>\n</details>",
+      "browsers": {
+        "ie": "x",
+        "ed": "x",
+        "ch": 12,
+        "ff": 49,
+        "sa": 6,
+        "op": 15
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-details-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/interactive-elements.html#the-details-element",
+          "status": "WD"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Задает состояние элемента по умолчанию.",
+          "examples": [
+            {
+              "title": "true",
+              "description": "Элемент по умолчанию будет открыт.",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dfn",
+      "category": "семантические",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>Данный тег служит для первичного объявления термина на веб-странице. Определение термина описывается в аттрибуте <code>title</code> тега или в таком же аттрибуте, но во вложенном теге <a href='/abbr.html'>abbr</a>.</p>",
+      "example": "<dfn>Всемирная паутина</dfn> является частью интернета, которая использует протокол HTTP.",
+      "browsers": {
+        "ie": 2,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dfn-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-dfn-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "category": "экспериментальные",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Данный тег представляет собой диалоговое окно, в которое можно вставить люой текст, форму регистрации и т.д.</p>",
+      "example": "<dialog open>Какой-то текст</dialog>",
+      "browsers": {
+        "ie": "x",
+        "ch": 37,
+        "ff": "x",
+        "sa": "x",
+        "op": 24
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/interactive-elements.html#the-dialog-element",
+          "status": "WD"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "open",
+          "required": "empty",
+          "description": "Если этот атрибут указан, модальное окно отображается, без него тег получает свойство display равное none."
+        }
+      ]
     }
   ]
 }
