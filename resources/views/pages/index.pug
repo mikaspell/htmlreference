@@ -7,8 +7,8 @@ block title
 
 block date
   mixin getTime(time)
-    - var day = time.getDay()
-    - var month = time.getMonth()
+    - var day = time.getDate()
+    - var month = time.getMonth() + 1
     - var year = time.getFullYear()
     - var hour = time.getHours()
     - var minutes = time.getMinutes()
