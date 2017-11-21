@@ -1310,6 +1310,102 @@
           "description": "Если этот атрибут указан, модальное окно отображается, без него тег получает свойство display равное none."
         }
       ]
+    },
+    {
+      "name": "div",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;div&gt; является универсальным блочным элементом, который используется для группирования элементов для последующей их стилизации. Не обладает никаким семантическим значением.</p>",
+      "example": "<div>...</div>",
+      "browsers": {
+        "ie": 4,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-div-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-div-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.4",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "dl",
+      "category": "списки",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;dl&gt; объявляет список описаний. Является оберткой для элементов <a href='/dd.html'>dd</a> и <a href='/dt.html'>dt</a>.</p>",
+      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-dl-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "dt",
+      "category": "списки",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;dt&gt; в списке описаний объявляет термин, который после описывается в элементе <a href='/dd.html'>dd</a>.</p>",
+      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dt-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-dt-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+          "status": "RC"
+        }
+      ]
     }
   ]
 }
