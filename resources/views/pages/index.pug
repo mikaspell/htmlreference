@@ -10,8 +10,8 @@ block date
     - var day = time.getDate()
     - var month = time.getMonth() + 1
     - var year = time.getFullYear()
-    - var hour = time.getHours()
-    - var minutes = time.getMinutes()
+    - var hour = time.getHours() < 10 ? '0' + time.getHours() : time.getHours()
+    - var minutes = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()
 
     #last-edited= 'Последние изменения: '+ day +'.'+ month +'.'+ year +', '+ hour +':'+ minutes
 
