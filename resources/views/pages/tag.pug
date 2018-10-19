@@ -15,35 +15,43 @@ block h1
 
 block content
   .row
-    .eight.columns
-      if(description)
-        h5 Описание:
-        div!= description
-    .four.columns
-      if(refs)
-        h5 Стандарты:
-        table.u-full-width.table--refs
-          //thead
-          //  tr
-          //    th Ресурс
-          //    th Статус
-          tbody
-            each ref in refs
-              if(ref.status === "LS")
-                - var ref_status = 'Текущий стандарт'
-              else if(ref.status === "RC")
-                - var ref_status = 'Рекомендация'
-              else if(ref.status === "CR")
-                - var ref_status = "Возможная рекомендация"
-              else if(ref.status === "PR")
-                - var ref_status = "Предлагаемая рекомендация"
-              else if(ref.status === "WD")
-                - var ref_status = "Рабочий черновик"
-              tr
-                td: a(href= ref.link target="_blank" rel="nofollow")= ref.name
-                td
-                  span= ref.status +' '
-                  span (#{ref_status})
+    .tvelwe.columns
+      .breadcrumbs
+        a.section(href="/") Главная
+        i.fa.fa-caret-right
+        .active.section
+          | Тег&nbsp;
+          strong= '<'+ name +'>'
+    .row
+      .eight.columns
+        if(description)
+          h5 Описание:
+          div!= description
+      .four.columns
+        if(refs)
+          h5 Стандарты:
+          table.u-full-width.table--refs
+            //thead
+            //  tr
+            //    th Ресурс
+            //    th Статус
+            tbody
+              each ref in refs
+                if(ref.status === "LS")
+                  - var ref_status = 'Текущий стандарт'
+                else if(ref.status === "RC")
+                  - var ref_status = 'Рекомендация'
+                else if(ref.status === "CR")
+                  - var ref_status = "Возможная рекомендация"
+                else if(ref.status === "PR")
+                  - var ref_status = "Предлагаемая рекомендация"
+                else if(ref.status === "WD")
+                  - var ref_status = "Рабочий черновик"
+                tr
+                  td: a(href= ref.link target="_blank" rel="nofollow")= ref.name
+                  td
+                    span= ref.status +' '
+                    span (#{ref_status})
 
   if(example)
     h5 Пример:

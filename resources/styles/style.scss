@@ -209,3 +209,19 @@ code {
   color: darken($light-grey, 10%);
   margin-top: 100px;
 }
+
+.breadcrumbs {
+  font-size: 0;
+  margin-bottom: 1rem;
+
+  > * {
+    display: inline-block;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+
+  .fa {
+    margin: 0 5px;
+    font-size: 1.2rem !important;
+  }
+}
