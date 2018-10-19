@@ -1621,6 +1621,35 @@
           "status": "WD"
         }
       ]
+    },
+    {
+      "name": "footer",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": true,
+      "description": "<p>Элемент &lt;footer&gt; используется для объявления \"подвальной\" части страницы, либо семантического блока. Не может быть вложен внутрь другого элемента &lt;footer&gt;, &lt;address&gt;, &lt;header&gt;</p><p>Внутри элемента &lt;footer&gt; не может находиться элемент &lt;main&gt;.</p>",
+      "example": "<footer>\n  ...\n</footer>",
+      "browsers": {
+        "ie": 9,
+        "ed": 12,
+        "ch": 5,
+        "ff": 4,
+        "sa": 5.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-footer-element",
+          "status": "WD"
+        }
+      ]
     }
   ]
 }
