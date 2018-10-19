@@ -1,11 +1,11 @@
 // Created by MikaSpell on 16.01.17.
 
-console.info('Пиши код красиво!', 'work@melkee.ru', '2017');
+console.info('Пиши код красиво!', 'work@melkee.ru', '2018');
 
 document.addEventListener('click', function (e) {
   var target = e.target;
 
-  if(target.tagName !== 'TD') return;
+  if(target.tagName !== 'TD' || !target.parentNode.hasAttribute('data-url')) return;
   location.href = target.parentNode.getAttribute('data-url');
 });
 
