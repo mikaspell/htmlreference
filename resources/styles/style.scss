@@ -17,8 +17,6 @@
 
 @import "partials/system/fonts";
 
-//@import "darcula.css";
-
 .banner-zone {
 
   background: $light-grey;
@@ -193,6 +191,11 @@ code {
   &--empty {
     margin-bottom: 0;
   }
+}
+
+#comments {
+  display: none;
+  margin-top: 50px;
 }
 
 #last-edited {

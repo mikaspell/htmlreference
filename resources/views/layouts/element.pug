@@ -37,3 +37,14 @@ html(lang="ru")
         block content
 
     include ../partials/system/scripts
+    script.
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://htmlreference.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      window.onload = function () {
+        var comments = document.getElementById('comments');
+        comments.style.display = 'block';
+      };
