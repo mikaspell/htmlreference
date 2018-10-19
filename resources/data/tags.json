@@ -1554,6 +1554,62 @@
           "required": "empty"
         }
       ]
+    },
+    {
+      "name": "figcaption",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;figcaption&gt; содержит описание для элемента <a href='/figure.html'>&lt;figure&gt;</a>.</p>",
+      "example": "<figure>\n  <figcaption>Какое-то описание</figcaption>\n</figure>",
+      "browsers": {
+        "ie": 9,
+        "ed": 12,
+        "ch": 5,
+        "ff": 4,
+        "sa": 5.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figcaption-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-figcaption-element",
+          "status": "WD"
+        }
+      ]
+    },
+    {
+      "name": "figure",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>Элемент &lt;figure&gt; служит для группировния элементов, как правило, изображений и подписей к ним. Данный тег является обособленной частью контента, что значит, если вы перенесете его в другую часть страницы, смысл содержимого не должен измениться.</p>",
+      "example": "<figure>\n  ...\n</figure>",
+      "browsers": {
+        "ie": 9,
+        "ed": 12,
+        "ch": 5,
+        "ff": 4,
+        "sa": 5.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figure-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-figure-element",
+          "status": "WD"
+        }
+      ]
     }
   ]
 }
