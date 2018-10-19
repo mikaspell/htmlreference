@@ -59,6 +59,11 @@ main {
 
     &:first-of-type {
       width: 70%;
+      color: #e34f26;
+
+      a {
+        margin-right: 5px;
+      }
     }
 
     &:last-of-type {

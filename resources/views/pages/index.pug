@@ -3,61 +3,62 @@
 extends ../layouts/base
 
 block title
-  title htmlreference.ru - Простой справочник по html
+	title htmlreference.ru - Простой справочник по html
 
 block date
-  mixin getTime(time)
-    - var day = time.getDate()
-    - var month = time.getMonth() + 1
-    - var year = time.getFullYear()
-    - var hour = time.getHours() < 10 ? '0' + time.getHours() : time.getHours()
-    - var minutes = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()
+	mixin getTime(time)
+		- var day = time.getDate()
+		- var month = time.getMonth() + 1
+		- var year = time.getFullYear()
+		- var hour = time.getHours() < 10 ? '0' + time.getHours() : time.getHours()
+		- var minutes = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()
 
-    #last-edited= 'Последние изменения: '+ day +'.'+ month +'.'+ year +', '+ hour +':'+ minutes
+		#last-edited= 'Последние изменения: ' + day + '.' + month + '.' + year + ', ' + hour + ':' + minutes
 
-  +getTime(time)
+	+getTime(time)
 
 block content
-  p
-  section#tags
-    #tag_filter
-      .row
-        .two.columns
-          input(type="checkbox" id="basic-tags" value="basic" name="types" checked)
-          label(for="basic-tags") Базовые
-        .two.columns
-          input(type="checkbox" id="semantic-tags" value="semantic" name="types" checked)
-          label(for="semantic-tags") Семантика
-        .two.columns
-          input(type="checkbox" id="form-tags" value="forms" name="types" checked)
-          label(for="form-tags") Формы
-        .two.columns
-          input(type="checkbox" id="list-tags" value="lists" name="types" checked)
-          label(for="list-tags") Списки
-        .two.columns
-          input(type="checkbox" id="table-tags" value="tables" name="types" checked)
-          label(for="table-tags") Таблицы
-    table.u-full-width.all-tag-table
-      tbody
-        each tag in tags
-          if tag.category === 'базовые'
-            - var category = 'basic'
-          else if tag.category === 'семантические'
-            - var category = 'semantic'
-          else if tag.category === 'формы'
-            - var category = 'forms'
-          else if tag.category === 'списки'
-            - var category = 'lists'
-          else if tag.category === 'табличные'
-            - var category = 'tables'
+	p
+	section#tags
+		#tag_filter
+			.row
+				.two.columns
+					input(type="checkbox" id="basic-tags" value="basic" name="types" checked)
+					label(for="basic-tags") Базовые
+				.two.columns
+					input(type="checkbox" id="semantic-tags" value="semantic" name="types" checked)
+					label(for="semantic-tags") Семантика
+				.two.columns
+					input(type="checkbox" id="form-tags" value="forms" name="types" checked)
+					label(for="form-tags") Формы
+				.two.columns
+					input(type="checkbox" id="list-tags" value="lists" name="types" checked)
+					label(for="list-tags") Списки
+				.two.columns
+					input(type="checkbox" id="table-tags" value="tables" name="types" checked)
+					label(for="table-tags") Таблицы
+		table.u-full-width.all-tag-table
+			tbody
+				each tag in tags
+					if tag.category === 'базовые'
+						- var category = 'basic'
+					else if tag.category === 'семантические'
+						- var category = 'semantic'
+					else if tag.category === 'формы'
+						- var category = 'forms'
+					else if tag.category === 'списки'
+						- var category = 'lists'
+					else if tag.category === 'табличные'
+						- var category = 'tables'
 
-          tr("data-url"='/'+ tag.name +'.html' "data-category"= category)
-            td
-              a(href='/'+ tag.name + '.html')= tag.name
-            td= tag.category
-            td= tag.type
-            if (tag.self_closing)
-              td одинарные
-            else
-              td парные
-
+					tr("data-url"='/' + tag.name + '.html' "data-category"= category)
+						td
+							a(href='/' + tag.name + '.html')= tag.name
+							if (tag.html5)
+								i.fa.fa-html5
+						td= tag.category
+						td= tag.type
+						if (tag.self_closing)
+							td одинарные
+						else
+							td парные

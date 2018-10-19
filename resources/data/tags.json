@@ -289,6 +289,7 @@
       "category": "семантические",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Определяет автономный блок контента, который может использоваться в любом контексте. Используется как элемент списка новостей, статей, записей блога, комментариев и др.</p>",
       "example": "<article>Невероятное проишествие по адресу ул. Пушкина дом Колотушкина.</article>",
       "browsers": {
@@ -321,6 +322,7 @@
       "category": "семантические",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Содержит в себе контент относящийся к основному контенту на странице. Обычно используется как боковая колонка.</p>",
       "example": "<aside>...</aside>",
       "browsers": {
@@ -353,6 +355,7 @@
       "category": "базовые",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Позволяет добавлять и управлять аудиозаписями на веб-странице.</p><p>Путь к аудио файлу указывается через аттриут <code>src</code> или через вложенный тег <a href='/tags/source.html'>&lt;source&gt;</a>.</p>",
       "example": "<audio src='/path/to/unknown.mp3'></audio>",
       "browsers": {
@@ -544,6 +547,7 @@
       "category": "базовые",
       "type": "строчные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Служит для выделения части текста, которая должна быть изолирована от общего направления вывода текста, т.е. меняет напрвление на обратное. Обычно используется для текстов, содержащих в себе разные языки.</p>",
       "example": "Слово <bdi>مرحبا</bdi> с Арабского переводится как 'Привет'",
       "browsers": {
@@ -834,6 +838,7 @@
       "category": "базовые",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Создает область, в которой при помощи Javascript можно отрисовывать различную графику.</p>",
       "example": "<canvas></canvas>",
       "browsers": {
@@ -1047,6 +1052,7 @@
       "category": "базовые",
       "type": "строчные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Содержит в аттрибуте <code>value</code> данные в машиночитаемом виде, используемом для внешних систем или для скриптов на самом сайте.</p>",
       "example": "<data value='значение'>...</data>",
       "browsers": {
@@ -1091,6 +1097,7 @@
       "category": "базовые",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Содержит в себе список данных для автоматических подсказок для текстовых полей <a href='/input.html'>input</a>. Данные в тектовом поле вызываются с помощью аттрибута <code>list</code>.</p>",
       "example": "<input list='cities'>\n<datalist id='cities'>\n  <option value='Москва'>\n  <option value='Петербург'>\n</datalist>",
       "browsers": {
@@ -1208,6 +1215,7 @@
       "category": "базовые",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Этот тег позволяет создать разворачиваемый блок без использования JS, который содержит в себе краткое описание и подробное.</p>",
       "example": "<details>\n  <summary>Подробнее</summary>\n  <p>Подробное описание, которое может быть скрыто.</p>\n</details>",
       "browsers": {
@@ -1282,6 +1290,7 @@
       "category": "экспериментальные",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Данный тег представляет собой диалоговое окно, в которое можно вставить люой текст, форму регистрации и т.д.</p>",
       "example": "<dialog open>Какой-то текст</dialog>",
       "browsers": {
@@ -1560,6 +1569,7 @@
       "category": "семантические",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Элемент &lt;figcaption&gt; содержит описание для элемента <a href='/figure.html'>&lt;figure&gt;</a>.</p>",
       "example": "<figure>\n  <figcaption>Какое-то описание</figcaption>\n</figure>",
       "browsers": {
@@ -1588,6 +1598,7 @@
       "category": "семантические",
       "type": "блочные",
       "self_closing": false,
+      "html5": true,
       "description": "<p>Элемент &lt;figure&gt; служит для группировния элементов, как правило, изображений и подписей к ним. Данный тег является обособленной частью контента, что значит, если вы перенесете его в другую часть страницы, смысл содержимого не должен измениться.</p>",
       "example": "<figure>\n  ...\n</figure>",
       "browsers": {
