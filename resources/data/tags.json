@@ -1406,6 +1406,154 @@
           "status": "RC"
         }
       ]
+    },
+    {
+      "name": "em",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "description": "<p>С помощью данного элемента указывается акцент на том или ином слове, варыжении. Браузер отображет текст в данном элементе курсивом.</p><p>Стоит отметить, что элементы &lt;em&gt; и &lt;i&gt; не являются одинаковыми по значению: &lt;i&gt; делает текст курсивным, а &lt;em&gt; - задает акцент на тексте внутри него.</p>",
+      "example": "<em>Какой-то текст</em>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-em-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-em-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "embed",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": true,
+      "description": "<p>Данный элемент позволяет загрузить на веб-страницу сторонние ресурсы (видеоролики, флеш-ролики, аудио), которые браузер изначально не понимает.</p>",
+      "example": "<embed src='https://www.youtube.com/embed/xuDTJNbHO34'>",
+      "browsers": {
+        "ie": 3,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-embed-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-embed-element",
+          "status": "WD"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "src",
+          "description": "Путь к файлу.",
+          "examples": [
+            {
+              "title": "https://www.youtube.com/embed/xuDTJNbHO34",
+              "description": "",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "MIME-тип файла.",
+          "examples": [
+            {
+              "title": "mpeg",
+              "description": "Можно использовать только допустимые <a href='http://www.iana.org/assignments/media-types/media-types.xhtml' rel='nofollow'>MIME-типы</a>.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "width",
+          "description": "Указывается ширина контейнера файла.",
+          "examples": [
+            {
+              "title": "640",
+              "description": "Величина в пикселях.",
+              "example": "",
+              "default": false
+            }
+          ]
+        },
+        {
+          "name": "height",
+          "description": "Указывается высота контейнера файла.",
+          "examples": [
+            {
+              "title": "480",
+              "description": "Величина в пикселях.",
+              "example": "",
+              "default": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fieldset",
+      "category": "формы",
+      "type": "блочные",
+      "self_closing": false,
+      "description": "<p>С помощью элемента &lt;fieldset&gt; можно группировать элементы формы. С помощью такой группировки элементов можно применять общую стилизацию к блоку или для удобства чтения кода, особенно в больших формах.</p><p>В браузерах группа элементов формы в элементе &lt;fieldset&gt; обрамляется рамкой, которую можно стилизовать.</p>",
+      "example": "<form>\n  <fieldset>...</fieldset>\n</form>",
+      "browsers": {
+        "ie": 4,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 6
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sec-forms.html#the-fieldset-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4.01",
+          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.10",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Делает неактивными все элементы формы внутри себя.",
+          "required": "empty"
+        }
+      ]
     }
   ]
 }
