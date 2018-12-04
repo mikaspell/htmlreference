@@ -64,7 +64,7 @@ block content
       each attr in attributes
         tr
           td
-            strong(style=attr.required && attr.required !== "empty" ? "color:red" : none)= attr.name
+            strong(style=attr.required && attr.required !== "empty" ? "color:red": '')= attr.name
             if(attr.required && attr.required !== "empty")
               span.required(title="Обязательный атрибут!")
             if(attr.description)
