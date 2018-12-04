@@ -1650,6 +1650,106 @@
           "status": "WD"
         }
       ]
+    },
+    {
+      "name": "form",
+      "category": "формы",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<form>\n  ...\n</form>",
+      "browsers": {
+        "ie": 3,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 3.5
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sec-forms.html#the-form-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.3",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "accept-charset",
+          "description": "Указывается кодировка, в которой сервер может принимать данные."
+        },
+        {
+          "name": "action",
+          "description": "Указывается адрес, где обрабатываются данные с формы."
+        },
+        {
+          "name": "autocomplete",
+          "description": "Активирует автозаполнение полей формы."
+        },
+        {
+          "name": "enctype",
+          "description": "Указывается способ кодирования данных формы."
+        },
+        {
+          "name": "method",
+          "description": "Указывается метод протокола HTTP."
+        },
+        {
+          "name": "name",
+          "description": "Название формы."
+        },
+        {
+          "name": "novalidate",
+          "description": "Отменяет встроенную валидацию на корректность введенных данных."
+        },
+        {
+          "name": "target",
+          "description": "Имя окна или фрейма, куда обработчик загрузит результат."
+        }
+      ]
+    },
+    {
+      "name": "h1",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h1>Самый главный заголовок</h1>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
     }
   ]
 }
