@@ -17,13 +17,15 @@ var gulp = require('gulp'),
       css: 'resources/styles/style.scss',
       js: 'resources/scripts/*.js',
       img: 'resources/images/**/*.*',
-      tags: 'resources/data/tags.json'
+      tags: 'resources/data/tags.json',
+      descriptions: 'resources/data/descriptions/'
     },
     watch: {
       html: 'resources/views/**/*.pug',
       css: 'resources/styles/**/*.scss',
       js: 'resources/scripts/*.js',
-      img: 'resources/images/**/*.*'
+      img: 'resources/images/**/*.*',
+	    descriptions: 'resources/data/descriptions/*.html'
     },
     build: {
       html: 'build/',
@@ -32,6 +34,9 @@ var gulp = require('gulp'),
       img: 'build/img/'
     }
   };
+
+var cache = [];
+var tags;
 
 // Запуск локального сервера
 gulp.task('localserver', function() {
@@ -51,7 +56,7 @@ gulp.task('clean', function (cb) {
 // Запуск компиляции HTML
 gulp.task('html', function() {
 
-  const tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
+  tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
 
   return gulp.src(path.src.html)
     .pipe(plumber())
@@ -67,20 +72,23 @@ gulp.task('html', function() {
 
 gulp.task('tags_page', function () {
 
-  var tags = JSON.parse(fs.readFileSync(path.src.tags)).tags,
-    tag;
-
-  for (tag in tags) {
-    gulp.src('resources/views/pages/tag.pug')
-      .pipe(pug({
-        pretty: true,
-        data: tags[tag]
-      }))
-      .pipe(rename({
-        basename: tags[tag].name
-      }))
-      .pipe(gulp.dest(path.build.html));
-  }
+  tags.forEach(function(tag, index) {
+	  if(!tag.description) {
+	    if(!cache[index]){
+		    cache[index] = fs.readFileSync(path.src.descriptions + tag.name +'.html', 'utf8')
+      }
+		  tag.description = cache[index];
+	  }
+	  gulp.src('resources/views/pages/tag.pug')
+		  .pipe(pug({
+			  pretty: true,
+			  data: tag
+		  }))
+		  .pipe(rename({
+			  basename: tag.name
+		  }))
+		  .pipe(gulp.dest(path.build.html));
+  });
 });
 
 // Запуск компиляции CSS
@@ -137,7 +145,7 @@ gulp.task('copy', function () {
 // Наблюдение за изменением файлов
 gulp.task('default', ['localserver'], function() {
 
-  watch([path.watch.html, path.src.tags], function(event, cb) {
+  watch([path.watch.html, path.src.tags, path.watch.descriptions], function(event, cb) {
     gulp.start(['html', 'tags_page']);
   });
   watch([path.watch.css], function(event, cb) {
@@ -152,4 +160,4 @@ gulp.task('default', ['localserver'], function() {
 });
 
 // Выполнение всех тасков по порядку
-gulp.task('build', sequence('clean', ['html', 'tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
+gulp.task('build', sequence('clean', 'html', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
