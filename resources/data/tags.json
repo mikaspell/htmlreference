@@ -1750,6 +1750,255 @@
           "status": "RC"
         }
       ]
+    },
+    {
+      "name": "h2",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h2>Заголовок второго уровня</h2>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "h3",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h3>Заголовок третьего уровня</h3>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "h4",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h4>Заголовок четвертого уровня</h4>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "h5",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h5>Заголовок пятого уровня</h5>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "h6",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<h6>Заголовок шестого уровня</h6>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<head>\n  <!-- Метаданные страницы -->\n</head>",
+      "browsers": {
+        "ie": 1,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 1
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/document-metadata.html#the-head-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.4.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": true,
+      "example": "<header>\n  ...\n</header>",
+      "browsers": {
+        "ie": 9,
+        "ed": 12,
+        "ch": 5,
+        "ff": 4,
+        "sa": 4.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-header-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://www.w3.org/TR/html5/sections.html#the-header-element",
+          "status": "WD"
+        }
+      ]
+    },
+    {
+      "name": "hgroup",
+      "category": "семантические",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<hgroup>\n  ...\n</hgroup>",
+      "browsers": {
+        "ie": 9,
+        "ed": 12,
+        "ch": 5,
+        "ff": 4,
+        "sa": 4.1,
+        "op": 11.10
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hgroup-element",
+          "status": "LS"
+        }
+      ]
     }
   ]
 }
