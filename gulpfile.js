@@ -53,10 +53,23 @@ gulp.task('clean', function (cb) {
   cleaner(path.build.html, cb);
 });
 
-// Запуск компиляции HTML
-gulp.task('html', function() {
+gulp.task('indexing', function () {
+	tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
+	
+	tags.forEach(function (tag, index) {
+		var filePath = path.src.descriptions + tag.name +'.html';
+		var isExistFilePath = fs.existsSync(filePath);
+		
+	  if(!tag.description) {
+	  	if(!isExistFilePath) fs.appendFileSync(filePath, '<p>Описания пока нет...</p>', 'utf8');
+	  	
+		  cache[index] = fs.readFileSync(filePath, 'utf8');
+    }
+	});
+});
 
-  tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
+// Запуск компиляции HTML
+gulp.task('html', ['indexing'], function() {
 
   return gulp.src(path.src.html)
     .pipe(plumber())
@@ -70,15 +83,11 @@ gulp.task('html', function() {
     .pipe(gulp.dest(path.build.html));
 });
 
-gulp.task('tags_page', function () {
+gulp.task('tags_page', ['html'],function () {
 
   tags.forEach(function(tag, index) {
-	  if(!tag.description) {
-	    if(!cache[index]){
-		    cache[index] = fs.readFileSync(path.src.descriptions + tag.name +'.html', 'utf8')
-      }
-		  tag.description = cache[index];
-	  }
+	  if(!tag.description) tag.description = cache[index];
+	  
 	  gulp.src('resources/views/pages/tag.pug')
 		  .pipe(pug({
 			  pretty: true,
@@ -145,13 +154,16 @@ gulp.task('copy', function () {
 // Наблюдение за изменением файлов
 gulp.task('default', ['localserver'], function() {
 
-  watch([path.watch.html, path.src.tags, path.watch.descriptions], function(event, cb) {
-    gulp.start(['html', 'tags_page']);
+	watch(path.watch.html, function () {
+		gulp.start('html');
+	});
+  watch([path.src.tags, path.watch.descriptions], function(event, cb) {
+    gulp.start('tags_page');
   });
-  watch([path.watch.css], function(event, cb) {
+  watch(path.watch.css, function(event, cb) {
     gulp.start('css');
   });
-  watch([path.watch.js], function(event, cb) {
+  watch(path.watch.js, function(event, cb) {
     gulp.start('js');
   });
   watch([path.watch.img], function(event, cb) {
@@ -160,4 +172,4 @@ gulp.task('default', ['localserver'], function() {
 });
 
 // Выполнение всех тасков по порядку
-gulp.task('build', sequence('clean', 'html', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
+gulp.task('build', sequence('clean', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
