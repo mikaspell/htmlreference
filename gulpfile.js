@@ -53,23 +53,26 @@ gulp.task('clean', function (cb) {
   cleaner(path.build.html, cb);
 });
 
-gulp.task('indexing', function () {
+gulp.task('indexJSON', function () {
 	tags = JSON.parse(fs.readFileSync(path.src.tags));
-	
+});
+
+gulp.task('indexDESCS', ['indexJSON'], function () {
 	tags.forEach(function (tag, index) {
 		var filePath = path.src.descriptions + tag.name +'.html';
 		var isExistFilePath = fs.existsSync(filePath);
 		
-	  if(!tag.description) {
-	  	if(!isExistFilePath) fs.appendFileSync(filePath, '<p>Описания пока нет...</p>', 'utf8');
-	  	
-		  cache[index] = fs.readFileSync(filePath, 'utf8');
-    }
+		if(!tag.description) {
+			if(!isExistFilePath) fs.appendFileSync(filePath, '<p>Описания пока нет...</p>', 'utf8');
+			
+			cache[index] = fs.readFileSync(filePath, 'utf8');
+		}
 	});
 });
 
+
 // Запуск компиляции HTML
-gulp.task('html', ['indexing'], function() {
+gulp.task('html', ['indexJSON'], function() {
 
   return gulp.src(path.src.html)
     .pipe(plumber())
@@ -83,7 +86,7 @@ gulp.task('html', ['indexing'], function() {
     .pipe(gulp.dest(path.build.html));
 });
 
-gulp.task('tags_page', ['html'],function () {
+gulp.task('tags_page', ['indexDESCS'], function () {
 
   tags.forEach(function(tag, index) {
 	  if(!tag.description) tag.description = cache[index];
@@ -147,7 +150,7 @@ gulp.task('vendors', function() {
 
 // Копирование файлов
 gulp.task('copy', function () {
-  gulp.src('./resources/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+  gulp.src('./resources/fonts/**/*.{ttf,woff,woff2,eof,eot,svg}')
     .pipe(gulp.dest('./build/fonts'))
 });
 
@@ -155,7 +158,7 @@ gulp.task('copy', function () {
 gulp.task('default', ['localserver'], function() {
 
 	watch(path.watch.html, function () {
-		gulp.start('html');
+		gulp.start('html', 'tags_page');
 	});
   watch([path.src.tags, path.watch.descriptions], function(event, cb) {
     gulp.start('tags_page');
@@ -172,4 +175,4 @@ gulp.task('default', ['localserver'], function() {
 });
 
 // Выполнение всех тасков по порядку
-gulp.task('build', sequence('clean', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
+gulp.task('build', sequence('clean', 'html', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
