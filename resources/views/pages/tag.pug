@@ -15,107 +15,114 @@ block h1
 
 block content
   .row
-    .tvelwe.columns
-      .breadcrumbs
+    section#crumbs.tvelwe.columns
+      nav.breadcrumbs
         a.section(href="/") Главная
         i.fa.fa-caret-right
         .active.section
           | Тег&nbsp;
           strong= '<'+ name +'>'
-    .row
-      .eight.columns
-        if(description)
-          h5 Описание:
-          div!= description
-      .four.columns
-        if(refs)
-          h5 Стандарты:
-          table.u-full-width.table--refs
-            //thead
-            //  tr
-            //    th Ресурс
-            //    th Статус
-            tbody
-              each ref in refs
-                if(ref.status === "LS")
-                  - var ref_status = 'Текущий стандарт'
-                else if(ref.status === "RC")
-                  - var ref_status = 'Рекомендация'
-                else if(ref.status === "CR")
-                  - var ref_status = "Возможная рекомендация"
-                else if(ref.status === "PR")
-                  - var ref_status = "Предлагаемая рекомендация"
-                else if(ref.status === "WD")
-                  - var ref_status = "Рабочий черновик"
-                tr
-                  td: a(href= ref.link target="_blank" rel="nofollow")= ref.name
-                  td
-                    span= ref.status +' '
-                    span (#{ref_status})
+    .twelve.columns
+      .row
+        section#description.eight.columns
+          if(description)
+            h5 Описание:
+            div!= description
+        section#references.four.columns
+          if(refs)
+            h5 Стандарты:
+            table.u-full-width.table--refs
+              //thead
+              //  tr
+              //    th Ресурс
+              //    th Статус
+              tbody
+                each ref in refs
+                  if(ref.status === "LS")
+                    - var ref_status = 'Текущий стандарт'
+                  else if(ref.status === "RC")
+                    - var ref_status = 'Рекомендация'
+                  else if(ref.status === "CR")
+                    - var ref_status = "Возможная рекомендация"
+                  else if(ref.status === "PR")
+                    - var ref_status = "Предлагаемая рекомендация"
+                  else if(ref.status === "WD")
+                    - var ref_status = "Рабочий черновик"
+                  tr
+                    td: a(href= ref.link target="_blank" rel="nofollow")= ref.name
+                    td
+                      span= ref.status +' '
+                      span (#{ref_status})
 
   if(example)
-    h5 Пример:
-    pre
-      code= example
+    .row
+      section#example.twelve.columns
+        h5 Пример:
+        pre
+          code= example
 
   if (attributes)
-    h5 Атрибуты:
-    table.u-full-width.table--attrs
-      each attr in attributes
-        tr
-          td
-            strong(style=attr.required && attr.required !== "empty" ? "color:red": '')= attr.name
-            if(attr.required && attr.required !== "empty")
-              span.required(title="Обязательный атрибут!")
-            if(attr.description)
-              p= attr.description
-            if(attr.required === "empty")
-              p.attribute--empty Значение не указывается
-          td
-            if(attr.examples)
-              each example in attr.examples
-                div
-                  if(example.title)
-                    span &equals;
-                    code.attribute= example.title
-                    if(example.default)
-                      span.attribute-default (Значение по умолчанию)
-                  else
-                    hr
-                  p.attribute-example!= example.description
+    .row
+      section#attributes.twelve.columns
+        h5 Атрибуты:
+        table.u-full-width.table--attrs
+          each attr in attributes
+            tr
+              td
+                strong(style=attr.required && attr.required !== "empty" ? "color:red": '')= attr.name
+                if(attr.required && attr.required !== "empty")
+                  span.required(title="Обязательный атрибут!")
+                if(attr.description)
+                  p= attr.description
+                if(attr.required === "empty")
+                  p.attribute--empty Значение не указывается
+              td
+                if(attr.examples)
+                  each example in attr.examples
+                    div
+                      if(example.title)
+                        span &equals;
+                        code.attribute= example.title
+                        if(example.default)
+                          span.attribute-default (Значение по умолчанию)
+                      else
+                        hr
+                      p.attribute-example!= example.description
 
   if(browsers)
-    h5 Поддержка браузерами:
-    table.u-full-width.centered
-      thead
-        tr
-          th
-            i.fa.fa-internet-explorer
-            | IE
-          if(browsers.ed)
-            th
-              i.fa.fa-edge
-              | Edge
-          th
-            i.fa.fa-chrome
-            | Chrome
-          th
-            i.fa.fa-firefox
-            | Firefox
-          th
-            i.fa.fa-safari
-            | Safari
-          th
-            i.fa.fa-opera
-            | Opera
-      tbody
-        tr
-          each browser in browsers
-            if(browser && browser === "x")
-              td: i.fa.fa-close(style="color:red")
-            else
-              td= browser
-
-  section#comments
-    h5 Оставьте ваше мнение
-    #disqus_thread
+    .row
+      section#supports.twelve.columns
+        h5 Поддержка браузерами:
+        table.u-full-width.centered.no-last-border
+          thead
+            tr
+              th
+                i.fa.fa-internet-explorer
+                | IE
+              if(browsers.ed)
+                th
+                  i.fa.fa-edge
+                  | Edge
+              th
+                i.fa.fa-chrome
+                | Chrome
+              th
+                i.fa.fa-firefox
+                | Firefox
+              th
+                i.fa.fa-safari
+                | Safari
+              th
+                i.fa.fa-opera
+                | Opera
+          tbody
+            tr
+              each browser in browsers
+                if(browser && browser === "x")
+                  td: i.fa.fa-close(style="color:red")
+                else
+                  td= browser
+  .row
+    section#comments.twelve.columns
+      h5 Оставьте ваше мнение
+      #disqus_thread
