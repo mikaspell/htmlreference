@@ -1999,6 +1999,245 @@
           "status": "LS"
         }
       ]
+    },
+    {
+      "name": "hr",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": true,
+      "html5": false,
+      "example": "<hr>",
+      "browsers": {
+        "ie": 3,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/grouping-content.html#the-hr-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.3",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "html",
+      "category": "базовые",
+      "type": "блочные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<html>\n  ...\n</html>",
+      "browsers": {
+        "ie": 1,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 1
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/semantics.html#the-html-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.3",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "i",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<i>\n  ...\n</i>",
+      "browsers": {
+        "ie": 2,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 2
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-i-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-i-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
+          "status": "RC"
+        }
+      ]
+    },
+    {
+      "name": "iframe",
+      "category": "базовые",
+      "type": "строчные",
+      "self_closing": false,
+      "html5": false,
+      "example": "<iframe>\n  ...\n</iframe>",
+      "browsers": {
+        "ie": 4,
+        "ed": 12,
+        "ch": 1,
+        "ff": 1,
+        "sa": 1,
+        "op": 4
+      },
+      "refs": [
+        {
+          "name": "WHATWG HTML Living Standard",
+          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element",
+          "status": "LS"
+        },
+        {
+          "name": "w3 HTML5.3",
+          "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-iframe-element",
+          "status": "WD"
+        },
+        {
+          "name": "w3 HTML4",
+          "link": "http://www.w3.org/TR/html401/present/frames.html#h-16.5",
+          "status": "RC"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "src",
+          "description": "Указывается путь до документа, который будет отображаться во фрейме.",
+          "required": true
+        },
+        {
+          "name": "allowfullscreen",
+          "description": "Разрешает для фрейма полноэкранный режим."
+        },
+        {
+          "name": "height",
+          "description": "Задает высоту фрейма.",
+          "examples": [
+            {
+              "title": "150",
+              "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
+              "example": "100",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "name",
+          "description": "Название фрейма."
+        },
+        {
+          "name": "sandbox",
+          "description": "Используется для установки ограничений на загружаемый контент.",
+          "examples": [
+            {
+              "title": "(нет значения)",
+              "description": "Снятие всех ограничений."
+            },
+            {
+              "title": "allow-forms",
+              "description": "Разрешение на отправку форм из фрейма."
+            },
+            {
+              "title": "allow-modals",
+              "description": "Разрешение на открытие системных модальных окон (alert, promt и тд.)."
+            },
+            {
+              "title": "allow-orientation-lock",
+              "description": "Разрешение на блокировку поворота экрана."
+            },
+            {
+              "title": "allow-pointer-lock",
+              "description": "Разрешение на использование Pointer Lock API."
+            },
+            {
+              "title": "allow-popups",
+              "description": "Разрешение на использование всплывающих окон (window.open, target='_blank' и т.д.)."
+            },
+            {
+              "title": "allow-presentation",
+              "description": "Разрешение на использование Presentation API."
+            },
+            {
+              "title": "allow-same-origin",
+              "description": "Позволяет отображать содержимое фрейма как пренадлежащее к тому же хосту, что и активная веб-страница."
+            },
+            {
+              "title": "allow-scripts",
+              "description": "Разрешение на запуск и выполнение скриптов из фрейма. Создание всплывающих окон не разрешает."
+            },
+            {
+              "title": "allow-top-navigation",
+              "description": "Разрешение на открытие ссылок из фрейма в активной веб-странице."
+            }
+          ]
+        },
+        {
+          "name": "scrolling",
+          "description": "Задает способ прокрутки фрейма.",
+          "examples": [
+            {
+              "title": "auto",
+              "description": "Прокрутка добавляется браузером только по необходимости.",
+              "default": true
+            },
+            {
+              "title": "yes",
+              "description": "Прокрутка отображается всегда, независимо от объема информации."
+            },
+            {
+              "title": "no",
+              "description": "Запрет на прокрутку."
+            }
+          ]
+        },
+        {
+          "name": "srcdoc",
+          "description": "Хранит всю разметку фрейма в аттрибуте. Имеет преимущество перед аттрибутом src."
+        },
+        {
+          "name": "width",
+          "description": "Задает ширину фрейма.",
+          "examples": [
+            {
+              "title": "350",
+              "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
+              "default": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
