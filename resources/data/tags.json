@@ -1,2243 +1,2241 @@
-{
-  "tags": [
-    {
-      "name": "a",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "Элемент &lt;a&gt; является одним из важных в HTML и предназначен для создания ссылок. Для этого необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута href используется адрес документа, на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.",
-      "example": "<a href='http://htmlreference.ru'>htmlreference.ru</a>",
-      "browsers": {
-        "ie": 1,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 1.3
-      },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-a-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element",
-          "status": "RC"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.2",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "href",
-          "required": true,
-          "description": "Содержит ссылку на цель",
-          "examples": [
-            {
-              "title": "http://htmlreference.ru",
-              "description": "Можно указывать абсолютные ссылки",
-              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "/tags/a.html",
-              "description": "Можно указывать относительные ссылки",
-              "example": "<a href='/tags/a.html'>Описание тега a</a>"
-            },
-            {
-              "title": "#footer",
-              "description": "Можно указывать ссылку на определенный элемент страницы",
-              "example": "<a href='#footer'>Footer</a>"
-            },
-            {
-              "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
-            }
-          ]
-        },
-        {
-          "name": "target",
-          "required": false,
-          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
-          "examples": [
-            {
-              "title": "_blank",
-              "description": "Открывает ссылку в новой вкладке браузера.",
-              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_self",
-              "description": "Открывает ссылку в текущей вкладке.",
-              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
-              "default": true
-            },
-            {
-              "title": "_parent",
-              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_top",
-              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
-            }
-          ]
-        }
-      ]
+[
+  {
+    "name": "a",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "Элемент &lt;a&gt; является одним из важных в HTML и предназначен для создания ссылок. Для этого необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута href используется адрес документа, на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.",
+    "example": "<a href='http://htmlreference.ru'>htmlreference.ru</a>",
+    "browsers": {
+      "ie": 1,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1.3
     },
-    {
-      "name": "abbr",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "Элемент &lt;abbr&gt; указывает, что последовательность символов является аббревиатурой. С помощью атрибута <code>title</code> даётся расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы. Кроме того, поисковые системы индексируют полнотекстовый вариант сокращения, это может использоваться для повышения рейтинга документа.",
-      "example": "<abbr>NATO</abbr>",
-      "browsers": {
-        "ie": 7,
-        "ch": 2,
-        "ff": 1,
-        "sa": 1,
-        "op": 1.3
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-a-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-abbr-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element",
-          "status": "CR"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#edef-ABBR",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element",
+        "status": "RC"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.2",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "href",
+        "required": true,
+        "description": "Содержит ссылку на цель",
+        "examples": [
+          {
+            "title": "http://htmlreference.ru",
+            "description": "Можно указывать абсолютные ссылки",
+            "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "/tags/a.html",
+            "description": "Можно указывать относительные ссылки",
+            "example": "<a href='/tags/a.html'>Описание тега a</a>"
+          },
+          {
+            "title": "#footer",
+            "description": "Можно указывать ссылку на определенный элемент страницы",
+            "example": "<a href='#footer'>Footer</a>"
+          },
+          {
+            "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
+          }
+        ]
+      },
+      {
+        "name": "target",
+        "required": false,
+        "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+        "examples": [
+          {
+            "title": "_blank",
+            "description": "Открывает ссылку в новой вкладке браузера.",
+            "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_self",
+            "description": "Открывает ссылку в текущей вкладке.",
+            "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+            "default": true
+          },
+          {
+            "title": "_parent",
+            "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_top",
+            "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "abbr",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "Элемент &lt;abbr&gt; указывает, что последовательность символов является аббревиатурой. С помощью атрибута <code>title</code> даётся расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы. Кроме того, поисковые системы индексируют полнотекстовый вариант сокращения, это может использоваться для повышения рейтинга документа.",
+    "example": "<abbr>NATO</abbr>",
+    "browsers": {
+      "ie": 7,
+      "ch": 2,
+      "ff": 1,
+      "sa": 1,
+      "op": 1.3
     },
-    {
-      "name": "address",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Элемент &lt;address&gt; предназначен для хранения контактной информации автора (адрес, телефон, e-mail, ссылка на сайт и др.) и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т. д. Планируется, что поисковые системы будут анализировать содержимое этого элемента для сбора информации об авторах.</p><p>&lt;address&gt; не должен использоваться для разметки почтовых адресов в целом, только для контактной информации.</p><p>Используйте &lt;address&gt; в следующем контексте:<ul><li>если &lt;address&gt; располагается внутри <a href='/tags/body.html'>&lt;body&gt;</a>, то информация внутри &lt;address&gt; относится ко всему документу в целом;</li><li>если &lt;address&gt; располагается внутри <a href='/tags/article.html'>&lt;article&gt;</a>, то информация внутри &lt;address&gt; относится к автору статьи.</li></ul></p>",
-      "example": "<address>Текст</address>",
-      "browsers": {
-        "ie": 1,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 5.12
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-abbr-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-address-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/sections.html#the-address-element",
-          "status": "PR"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.6",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element",
+        "status": "CR"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#edef-ABBR",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "address",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Элемент &lt;address&gt; предназначен для хранения контактной информации автора (адрес, телефон, e-mail, ссылка на сайт и др.) и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т. д. Планируется, что поисковые системы будут анализировать содержимое этого элемента для сбора информации об авторах.</p><p>&lt;address&gt; не должен использоваться для разметки почтовых адресов в целом, только для контактной информации.</p><p>Используйте &lt;address&gt; в следующем контексте:<ul><li>если &lt;address&gt; располагается внутри <a href='/tags/body.html'>&lt;body&gt;</a>, то информация внутри &lt;address&gt; относится ко всему документу в целом;</li><li>если &lt;address&gt; располагается внутри <a href='/tags/article.html'>&lt;article&gt;</a>, то информация внутри &lt;address&gt; относится к автору статьи.</li></ul></p>",
+    "example": "<address>Текст</address>",
+    "browsers": {
+      "ie": 1,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 5.12
     },
-    {
-      "name": "area",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": true,
-      "description": "<p>Каждый элемент &lt;area&gt; определяет активные области изображения, которые являются ссылками. Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку. &lt;area&gt; всегда располагается в контейнере <a href='/tags/map.html'>&lt;map&gt;</a>, который связывает координаты областей с изображением.</p><p>Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</p>",
-      "example": "<map id='australia'>\n  <area title='Australia' href='https://en.wikipedia.org/wiki/Australia_(continent)' shape='poly' coords='257,107,263,85,314,89,316,137,294,151,249,132,248,114'>\n</map>",
-      "browsers": {
-        "ie": 1,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-address-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element",
-          "status": "RC"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "title",
-          "description": "Содержит описание области.",
-          "examples": [
-            {
-              "title": "Москва",
-              "description": "Описание области отображается при наведении на область."
-            }
-          ]
-        },
-        {
-          "name": "shape",
-          "description": "Содержит определение формы области.",
-          "examples": [
-            {
-              "title": "rect",
-              "description": "Форма области представляет из себя прямоугольник и требует 4 координаты.",
-              "default": true
-            },
-            {
-              "title": "circle",
-              "description": "Форма области представляет из себя окружность и требует 2 координаты и 1 радиус."
-            },
-            {
-              "title": "polygon",
-              "description": "Форма области представляет из себя многоугольник с неограниченным количеством координат."
-            }
-          ]
-        },
-        {
-          "name": "coords",
-          "description": "Содержит координаты формы области",
-          "examples": [
-            {
-              "title": "12,233,67,31",
-              "description": "Форма <code>rect</code> требует 2 пары координат, где первая пара это координаты левой верхней точки области, а вторая пара - нижний правый угол."
-            },
-            {
-              "title": "65,37,12",
-              "description": "Форма <code>circle</code> требует пару координат и радиус. Координаты указывают на центр окружности."
-            },
-            {
-              "title": "123,213,333,123,12,32,142,345",
-              "description": "Форма <code>polygon</code> требует неограниченное количество пар координат."
-            }
-          ]
-        },
-        {
-          "name": "href",
-          "description": "Содержит ссылку на цель",
-          "examples": [
-            {
-              "title": "http://htmlreference.ru",
-              "description": "Можно указывать абсолютные ссылки",
-              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "/tags/a.html",
-              "description": "Можно указывать относительные ссылки",
-              "example": "<a href='/tags/a.html'>Описание тега a</a>"
-            },
-            {
-              "title": "#footer",
-              "description": "Можно указывать ссылку на определенный элемент страницы",
-              "example": "<a href='#footer'>Footer</a>"
-            },
-            {
-              "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
-            }
-          ]
-        },
-        {
-          "name": "target",
-          "required": false,
-          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
-          "examples": [
-            {
-              "title": "_blank",
-              "description": "Открывает ссылку в новой вкладке браузера.",
-              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_self",
-              "description": "Открывает ссылку в текущей вкладке.",
-              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
-              "default": true
-            },
-            {
-              "title": "_parent",
-              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_top",
-              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/sections.html#the-address-element",
+        "status": "PR"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.6",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "area",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": true,
+    "description": "<p>Каждый элемент &lt;area&gt; определяет активные области изображения, которые являются ссылками. Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку. &lt;area&gt; всегда располагается в контейнере <a href='/tags/map.html'>&lt;map&gt;</a>, который связывает координаты областей с изображением.</p><p>Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</p>",
+    "example": "<map id='australia'>\n  <area title='Australia' href='https://en.wikipedia.org/wiki/Australia_(continent)' shape='poly' coords='257,107,263,85,314,89,316,137,294,151,249,132,248,114'>\n</map>",
+    "browsers": {
+      "ie": 1,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3
     },
-    {
-      "name": "article",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Определяет автономный блок контента, который может использоваться в любом контексте. Используется как элемент списка новостей, статей, записей блога, комментариев и др.</p>",
-      "example": "<article>Невероятное проишествие по адресу ул. Пушкина дом Колотушкина.</article>",
-      "browsers": {
-        "ie": 9,
-        "ch": 5,
-        "ff": 4.1,
-        "sa": 4,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-article-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/sections.html#the-article-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/sections.html#the-article-element",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element",
+        "status": "RC"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "title",
+        "description": "Содержит описание области.",
+        "examples": [
+          {
+            "title": "Москва",
+            "description": "Описание области отображается при наведении на область."
+          }
+        ]
+      },
+      {
+        "name": "shape",
+        "description": "Содержит определение формы области.",
+        "examples": [
+          {
+            "title": "rect",
+            "description": "Форма области представляет из себя прямоугольник и требует 4 координаты.",
+            "default": true
+          },
+          {
+            "title": "circle",
+            "description": "Форма области представляет из себя окружность и требует 2 координаты и 1 радиус."
+          },
+          {
+            "title": "polygon",
+            "description": "Форма области представляет из себя многоугольник с неограниченным количеством координат."
+          }
+        ]
+      },
+      {
+        "name": "coords",
+        "description": "Содержит координаты формы области",
+        "examples": [
+          {
+            "title": "12,233,67,31",
+            "description": "Форма <code>rect</code> требует 2 пары координат, где первая пара это координаты левой верхней точки области, а вторая пара - нижний правый угол."
+          },
+          {
+            "title": "65,37,12",
+            "description": "Форма <code>circle</code> требует пару координат и радиус. Координаты указывают на центр окружности."
+          },
+          {
+            "title": "123,213,333,123,12,32,142,345",
+            "description": "Форма <code>polygon</code> требует неограниченное количество пар координат."
+          }
+        ]
+      },
+      {
+        "name": "href",
+        "description": "Содержит ссылку на цель",
+        "examples": [
+          {
+            "title": "http://htmlreference.ru",
+            "description": "Можно указывать абсолютные ссылки",
+            "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "/tags/a.html",
+            "description": "Можно указывать относительные ссылки",
+            "example": "<a href='/tags/a.html'>Описание тега a</a>"
+          },
+          {
+            "title": "#footer",
+            "description": "Можно указывать ссылку на определенный элемент страницы",
+            "example": "<a href='#footer'>Footer</a>"
+          },
+          {
+            "description": "Так же можно указывать целями email-адреса и телефоны через <code>mailto:</code> или <code>tel:</code>"
+          }
+        ]
+      },
+      {
+        "name": "target",
+        "required": false,
+        "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+        "examples": [
+          {
+            "title": "_blank",
+            "description": "Открывает ссылку в новой вкладке браузера.",
+            "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_self",
+            "description": "Открывает ссылку в текущей вкладке.",
+            "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+            "default": true
+          },
+          {
+            "title": "_parent",
+            "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_top",
+            "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "article",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Определяет автономный блок контента, который может использоваться в любом контексте. Используется как элемент списка новостей, статей, записей блога, комментариев и др.</p>",
+    "example": "<article>Невероятное проишествие по адресу ул. Пушкина дом Колотушкина.</article>",
+    "browsers": {
+      "ie": 9,
+      "ch": 5,
+      "ff": 4.1,
+      "sa": 4,
+      "op": 11.10
     },
-    {
-      "name": "aside",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Содержит в себе контент относящийся к основному контенту на странице. Обычно используется как боковая колонка.</p>",
-      "example": "<aside>...</aside>",
-      "browsers": {
-        "ie": 9,
-        "ch": 5,
-        "ff": 4,
-        "sa": 5.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-article-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-aside-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/sections.html#the-aside-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "https://www.w3.org/TR/html5/sections.html#the-aside-element",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/sections.html#the-article-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/sections.html#the-article-element",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "aside",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Содержит в себе контент относящийся к основному контенту на странице. Обычно используется как боковая колонка.</p>",
+    "example": "<aside>...</aside>",
+    "browsers": {
+      "ie": 9,
+      "ch": 5,
+      "ff": 4,
+      "sa": 5.1,
+      "op": 11.10
     },
-    {
-      "name": "audio",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Позволяет добавлять и управлять аудиозаписями на веб-странице.</p><p>Путь к аудио файлу указывается через аттриут <code>src</code> или через вложенный тег <a href='/tags/source.html'>&lt;source&gt;</a>.</p>",
-      "example": "<audio src='/path/to/unknown.mp3'></audio>",
-      "browsers": {
-        "ie": 9,
-        "ch": 5,
-        "ff": 4,
-        "sa": 4.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-aside-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-audio-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/semantics-embedded-content.html#elementdef-audio",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "src",
-          "required": true,
-          "description": "Содержит путь к воспроизводимому файлу",
-          "examples": [
-            {
-              "title": "/path/to/unknown.mp3",
-              "description": "Вы можете указывать относительный путь к файлу",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "volume",
-          "description": "Задает громкость воспроизведения аудиофайла. Значения от 0.0 (без звука) до 1.0 (max громкость).",
-          "examples": [
-            {
-              "title": "0.0",
-              "description": "Звук отключен"
-            },
-            {
-              "title": "1.0",
-              "description": "Максимальная громкость"
-            }
-          ]
-        },
-        {
-          "name": "autoplay",
-          "description": "Включает автоматическое воспроизведение аудиозаписи.",
-          "required": "empty"
-        },
-        {
-          "name": "controls",
-          "description": "Включает отображание браузерных кнопок управления аудио.",
-          "required": "empty"
-        },
-        {
-          "name": "loop",
-          "description": "Включает повторение воспроизведения аудиозаписи.",
-          "required": "empty"
-        },
-        {
-          "name": "muted",
-          "description": "При воспроизведении аудиозаписи звук будет отключен по умолчанию.",
-          "required": "empty"
-        },
-        {
-          "name": "preload",
-          "description": "Аудиозапись будет автоматически загружена после загрузки веб-страницы.",
-          "required": "empty"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/sections.html#the-aside-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML5",
+        "link": "https://www.w3.org/TR/html5/sections.html#the-aside-element",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "audio",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Позволяет добавлять и управлять аудиозаписями на веб-странице.</p><p>Путь к аудио файлу указывается через аттриут <code>src</code> или через вложенный тег <a href='/tags/source.html'>&lt;source&gt;</a>.</p>",
+    "example": "<audio src='/path/to/unknown.mp3'></audio>",
+    "browsers": {
+      "ie": 9,
+      "ch": 5,
+      "ff": 4,
+      "sa": 4.1,
+      "op": 11.10
     },
-    {
-      "name": "b",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Устанавливает жирное начертание шрифта.</p>",
-      "example": "<b>... какой-то невероятный текст ...</b>",
-      "browsers": {
-        "ie": 2,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-audio-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-b-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-b-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/semantics-embedded-content.html#elementdef-audio",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "src",
+        "required": true,
+        "description": "Содержит путь к воспроизводимому файлу",
+        "examples": [
+          {
+            "title": "/path/to/unknown.mp3",
+            "description": "Вы можете указывать относительный путь к файлу",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "volume",
+        "description": "Задает громкость воспроизведения аудиофайла. Значения от 0.0 (без звука) до 1.0 (max громкость).",
+        "examples": [
+          {
+            "title": "0.0",
+            "description": "Звук отключен"
+          },
+          {
+            "title": "1.0",
+            "description": "Максимальная громкость"
+          }
+        ]
+      },
+      {
+        "name": "autoplay",
+        "description": "Включает автоматическое воспроизведение аудиозаписи.",
+        "required": "empty"
+      },
+      {
+        "name": "controls",
+        "description": "Включает отображание браузерных кнопок управления аудио.",
+        "required": "empty"
+      },
+      {
+        "name": "loop",
+        "description": "Включает повторение воспроизведения аудиозаписи.",
+        "required": "empty"
+      },
+      {
+        "name": "muted",
+        "description": "При воспроизведении аудиозаписи звук будет отключен по умолчанию.",
+        "required": "empty"
+      },
+      {
+        "name": "preload",
+        "description": "Аудиозапись будет автоматически загружена после загрузки веб-страницы.",
+        "required": "empty"
+      }
+    ]
+  },
+  {
+    "name": "b",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Устанавливает жирное начертание шрифта.</p>",
+    "example": "<b>... какой-то невероятный текст ...</b>",
+    "browsers": {
+      "ie": 2,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "base",
-      "category": "базовые",
-      "type": "-",
-      "self_closing": true,
-      "description": "<p>Указывает базовый url для относительных путей на страничке. Должен находиться в теге <a href='/head'>&lt;head&gt;</a>.</p>",
-      "example": "<head>\n  <base href='http://htmlreference.ru' />\n</head>",
-      "browsers": {
-        "ie": 2,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-b-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/document-metadata.html#the-base-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.4",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "href",
-          "description": "Содержит ссылку на цель",
-          "examples": [
-            {
-              "title": "http://htmlreference.ru",
-              "description": "Можно указывать абсолютные ссылки",
-              "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
-            }
-          ]
-        },
-        {
-          "name": "target",
-          "required": false,
-          "description": "Указывает в какой вкладке или каком окне открыть ссылку",
-          "examples": [
-            {
-              "title": "_blank",
-              "description": "Открывает ссылку в новой вкладке браузера.",
-              "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_self",
-              "description": "Открывает ссылку в текущей вкладке.",
-              "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
-              "default": true
-            },
-            {
-              "title": "_parent",
-              "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
-            },
-            {
-              "title": "_top",
-              "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
-              "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-b-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "base",
+    "category": "базовые",
+    "type": "-",
+    "self_closing": true,
+    "description": "<p>Указывает базовый url для относительных путей на страничке. Должен находиться в теге <a href='/head'>&lt;head&gt;</a>.</p>",
+    "example": "<head>\n  <base href='http://htmlreference.ru' />\n</head>",
+    "browsers": {
+      "ie": 2,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "bdi",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Служит для выделения части текста, которая должна быть изолирована от общего направления вывода текста, т.е. меняет напрвление на обратное. Обычно используется для текстов, содержащих в себе разные языки.</p>",
-      "example": "Слово <bdi>مرحبا</bdi> с Арабского переводится как 'Привет'",
-      "browsers": {
-        "ie": "x",
-        "ed": "x",
-        "ch": 16,
-        "ff": 10,
-        "sa": 7,
-        "op": 15
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdi-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdi-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/document-metadata.html#the-base-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/links.html#h-12.4",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "href",
+        "description": "Содержит ссылку на цель",
+        "examples": [
+          {
+            "title": "http://htmlreference.ru",
+            "description": "Можно указывать абсолютные ссылки",
+            "example": "<a href='http://htmlreference.ru'>http://htmlreference.ru</a>"
+          }
+        ]
+      },
+      {
+        "name": "target",
+        "required": false,
+        "description": "Указывает в какой вкладке или каком окне открыть ссылку",
+        "examples": [
+          {
+            "title": "_blank",
+            "description": "Открывает ссылку в новой вкладке браузера.",
+            "example": "<a href='http://htmlreference.ru' target='_blank'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_self",
+            "description": "Открывает ссылку в текущей вкладке.",
+            "example": "<a href='http://htmlreference.ru' target='_self'>http://htmlreference.ru</a>",
+            "default": true
+          },
+          {
+            "title": "_parent",
+            "description": "Открывает ссылку в родительском фрейме. Если фрейма нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_parent'>http://htmlreference.ru</a>"
+          },
+          {
+            "title": "_top",
+            "description": "Отменяет все фреймы и открывает ссылку в полном окне браузера. Если фреймов нет, то работает как _self.",
+            "example": "<a href='http://htmlreference.ru' target='_top'>http://htmlreference.ru</a>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bdi",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Служит для выделения части текста, которая должна быть изолирована от общего направления вывода текста, т.е. меняет напрвление на обратное. Обычно используется для текстов, содержащих в себе разные языки.</p>",
+    "example": "Слово <bdi>مرحبا</bdi> с Арабского переводится как 'Привет'",
+    "browsers": {
+      "ie": "x",
+      "ed": "x",
+      "ch": 16,
+      "ff": 10,
+      "sa": 7,
+      "op": 15
     },
-    {
-      "name": "bdo",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Позволяет установить направление вывода текста. Зачастую используется в текстах, где чтение происходит справа налево.</p>",
-      "example": "<bdo dir='ltr'>Какой-то текст</bdo>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdi-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdo-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdo-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-bdo-element",
-          "status": "RC"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "https://www.w3.org/TR/html401/struct/dirlang.html#h-8.2.4",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "dir",
-          "required": true,
-          "description": "Указывает в какую сторону должен выводиться текст.",
-          "examples": [
-            {
-              "title": "rtl",
-              "description": "Направление текста справа налево.",
-              "example": ""
-            },
-            {
-              "title": "ltr",
-              "description": "Направление текста слева направо.",
-              "example": ""
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdi-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "bdo",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Позволяет установить направление вывода текста. Зачастую используется в текстах, где чтение происходит справа налево.</p>",
+    "example": "<bdo dir='ltr'>Какой-то текст</bdo>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "blockquote",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Используется для выделения внутри текста длинных цитат.</p>",
-      "example": "<blockquote cite='https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back'>I'll be back</blockquote>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-bdo-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-blockquote-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-blockquote-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.2",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "cite",
-          "required": false,
-          "description": "Содержит ссылку на страницу откуда цитируется текст.",
-          "examples": [
-            {
-              "title": "https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back",
-              "description": "Вы можете использовать только действующие ссылки.",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-bdo-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML5",
+        "link": "http://www.w3.org/TR/html5/text-level-semantics.html#the-bdo-element",
+        "status": "RC"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "https://www.w3.org/TR/html401/struct/dirlang.html#h-8.2.4",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "dir",
+        "required": true,
+        "description": "Указывает в какую сторону должен выводиться текст.",
+        "examples": [
+          {
+            "title": "rtl",
+            "description": "Направление текста справа налево.",
+            "example": ""
+          },
+          {
+            "title": "ltr",
+            "description": "Направление текста слева направо.",
+            "example": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "blockquote",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Используется для выделения внутри текста длинных цитат.</p>",
+    "example": "<blockquote cite='https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back'>I'll be back</blockquote>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "body",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Тег &lt;body&gt; используется для хранения содержимого веб-страницы. Тексты, изображения, теги, скрипты и т.д. должны находится в этом теге.</p><p>Открывающий и закрывающий теги не обязательны, но хорошим тоном будет их использование, чтобы указать начало и конец документа.",
-      "example": "<!DOCTYPE html>\n<html>\n  <head>\n    <!-- Document metadata -->\n  </head>\n  <body>\n    <!-- Document content -->\n  </body>\n</html>",
-      "browsers": {
-        "ie": 1,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 1
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-blockquote-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-body-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/sections.html#the-body-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-blockquote-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.2",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "cite",
+        "required": false,
+        "description": "Содержит ссылку на страницу откуда цитируется текст.",
+        "examples": [
+          {
+            "title": "https://ru.wikipedia.org/wiki/I%E2%80%99ll_be_back",
+            "description": "Вы можете использовать только действующие ссылки.",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "body",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Тег &lt;body&gt; используется для хранения содержимого веб-страницы. Тексты, изображения, теги, скрипты и т.д. должны находится в этом теге.</p><p>Открывающий и закрывающий теги не обязательны, но хорошим тоном будет их использование, чтобы указать начало и конец документа.",
+    "example": "<!DOCTYPE html>\n<html>\n  <head>\n    <!-- Document metadata -->\n  </head>\n  <body>\n    <!-- Document content -->\n  </body>\n</html>",
+    "browsers": {
+      "ie": 1,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1
     },
-    {
-      "name": "br",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": true,
-      "description": "<p>Тег &lt;br&gt; устанавливает перевод строки в том месте, где он находится.</p>",
-      "example": "Далеко-далеко за словесными горами в<br> стране гласных и согласных живут рыбные<br> тексты. Вдали от всех живут они в буквенных домах на<br> берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее<br> всеми необходимыми правилами.",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-body-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-br-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-br-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.3.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/sections.html#the-body-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "br",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": true,
+    "description": "<p>Тег &lt;br&gt; устанавливает перевод строки в том месте, где он находится.</p>",
+    "example": "Далеко-далеко за словесными горами в<br> стране гласных и согласных живут рыбные<br> тексты. Вдали от всех живут они в буквенных домах на<br> берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее<br> всеми необходимыми правилами.",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "button",
-      "category": "формы",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Тег &lt;button&gt; позволяет добавлять кнопки на веб-страницу. Является некой аналогией тега &lt;input&gt; с типом submit, button или reset. Отличается от тега &lt;input&gt; большей способностью к кастомизации.</p>",
-      "example": "<button>Отправить</button>",
-      "browsers": {
-        "ie": 4,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 6
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-br-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-button-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/sec-forms.html#the-button-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.5",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "name",
-          "required": false,
-          "description": "Содержит в себе уникальный идентификатор кнопки. При отправке формы дает серверу доступ к значению кнопки.",
-          "examples": [
-            {
-              "title": "submit_form",
-              "description": "Значение name должно быть уникальным в контексте родительской формы. Может состоять из букв, цифр, знака тире и нижнего подчеркивания. Пробелы запрещены.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "value",
-          "required": false,
-          "description": "При отправке формы значение поля value тоже будет отправлено на сервер.",
-          "examples": [
-            {
-              "title": "submitted",
-              "description": "Сервер получит значение submitted.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "type",
-          "required": false,
-          "description": "Определяет тип кнопки.",
-          "examples": [
-            {
-              "title": "submit",
-              "description": "Отправляет данные формы на сервер.",
-              "example": "",
-              "default": true
-            },
-            {
-              "title": "reset",
-              "description": "Сбрасывает все указанные в форме данные.",
-              "example": "",
-              "default": false
-            },
-            {
-              "title": "button",
-              "description": "Ограничивает кнопку на взаимодействие с формами. Можно свободно использовать внутри форм и при нажатии на кнопку форма не отправится.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "disabled",
-          "required": "empty",
-          "description": "Ограничивает возможность взаимодействия пользователя с кнопкой."
-        },
-        {
-          "name": "autofocus",
-          "required": "empty",
-          "description": "Устанавливает фокус на кнопку после загрузки веб-страницы."
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-br-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.3.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "button",
+    "category": "формы",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Тег &lt;button&gt; позволяет добавлять кнопки на веб-страницу. Является некой аналогией тега &lt;input&gt; с типом submit, button или reset. Отличается от тега &lt;input&gt; большей способностью к кастомизации.</p>",
+    "example": "<button>Отправить</button>",
+    "browsers": {
+      "ie": 4,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 6
     },
-    {
-      "name": "canvas",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Создает область, в которой при помощи Javascript можно отрисовывать различную графику.</p>",
-      "example": "<canvas></canvas>",
-      "browsers": {
-        "ie": 9,
-        "ch": 1,
-        "ff": 1.5,
-        "sa": 2,
-        "op": 9
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-button-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/scripting.html#the-canvas-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/semantics-scripting.html#the-canvas-element",
-          "status": "WD"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "width",
-          "required": false,
-          "description": "Задает ширину области.",
-          "examples": [
-            {
-              "title": "300",
-              "description": "",
-              "example": "",
-              "default": true
-            }
-          ]
-        },
-        {
-          "name": "height",
-          "required": false,
-          "description": "Задает высоту области.",
-          "examples": [
-            {
-              "title": "150",
-              "description": "",
-              "example": "",
-              "default": true
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/sec-forms.html#the-button-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.5",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "name",
+        "required": false,
+        "description": "Содержит в себе уникальный идентификатор кнопки. При отправке формы дает серверу доступ к значению кнопки.",
+        "examples": [
+          {
+            "title": "submit_form",
+            "description": "Значение name должно быть уникальным в контексте родительской формы. Может состоять из букв, цифр, знака тире и нижнего подчеркивания. Пробелы запрещены.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "value",
+        "required": false,
+        "description": "При отправке формы значение поля value тоже будет отправлено на сервер.",
+        "examples": [
+          {
+            "title": "submitted",
+            "description": "Сервер получит значение submitted.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "type",
+        "required": false,
+        "description": "Определяет тип кнопки.",
+        "examples": [
+          {
+            "title": "submit",
+            "description": "Отправляет данные формы на сервер.",
+            "example": "",
+            "default": true
+          },
+          {
+            "title": "reset",
+            "description": "Сбрасывает все указанные в форме данные.",
+            "example": "",
+            "default": false
+          },
+          {
+            "title": "button",
+            "description": "Ограничивает кнопку на взаимодействие с формами. Можно свободно использовать внутри форм и при нажатии на кнопку форма не отправится.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "disabled",
+        "required": "empty",
+        "description": "Ограничивает возможность взаимодействия пользователя с кнопкой."
+      },
+      {
+        "name": "autofocus",
+        "required": "empty",
+        "description": "Устанавливает фокус на кнопку после загрузки веб-страницы."
+      }
+    ]
+  },
+  {
+    "name": "canvas",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Создает область, в которой при помощи Javascript можно отрисовывать различную графику.</p>",
+    "example": "<canvas></canvas>",
+    "browsers": {
+      "ie": 9,
+      "ch": 1,
+      "ff": 1.5,
+      "sa": 2,
+      "op": 9
     },
-    {
-      "name": "caption",
-      "category": "табличные",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Задает заголовок у таблицы. Обязательно должен распологаться сразу после открывающего тега <a href='/table'>table</a>.</p>",
-      "example": "<table>\n  <caption>Название</caption>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 7
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/scripting.html#the-canvas-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/tabular-data.html#the-caption-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.2",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/semantics-scripting.html#the-canvas-element",
+        "status": "WD"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "width",
+        "required": false,
+        "description": "Задает ширину области.",
+        "examples": [
+          {
+            "title": "300",
+            "description": "",
+            "example": "",
+            "default": true
+          }
+        ]
+      },
+      {
+        "name": "height",
+        "required": false,
+        "description": "Задает высоту области.",
+        "examples": [
+          {
+            "title": "150",
+            "description": "",
+            "example": "",
+            "default": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "caption",
+    "category": "табличные",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Задает заголовок у таблицы. Обязательно должен распологаться сразу после открывающего тега <a href='/table'>table</a>.</p>",
+    "example": "<table>\n  <caption>Название</caption>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 7
     },
-    {
-      "name": "cite",
-      "category": "семантические",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Указывает источник цитаты, название какой-то креативной работы и т.д. Нельзя тегом оборачивать имена людей.</p>",
-      "example": "Долго. Дорого. О*уенно. <cite>artlebedev.ru</cite>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 7
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-cite-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-cite-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/tabular-data.html#the-caption-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.2",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "cite",
+    "category": "семантические",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Указывает источник цитаты, название какой-то креативной работы и т.д. Нельзя тегом оборачивать имена людей.</p>",
+    "example": "Долго. Дорого. О*уенно. <cite>artlebedev.ru</cite>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 7
     },
-    {
-      "name": "col",
-      "category": "табличные",
-      "type": "строчные",
-      "self_closing": true,
-      "description": "<p>Элемент задает ширину и другие параметры у одной или нескольких колонок. Возможно использование с тегом <a href='/colgroup.html'>colgroup</a>, который позволяет группировать колонки таблицы с одинаковыми свойствами. Использование тега &lt;col&gt; позволяет браузеру отрисовывать таблицу, не дожидаясь загрузки страницы.</p><p>Для тега &lt;col&gt; для стилезации допустимо использовать только свойства: <strong>border</strong>, <strong>background</strong>, <strong>width</strong> и <strong>visibility</strong>.</p>",
-      "example": "<table>\n  <col background='red'>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
-      "browsers": {
-        "ie": 5,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 4
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-cite-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/tabular-data.html#the-col-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "http://w3c.github.io/html/tabular-data.html#the-col-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.4.2",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "span",
-          "required": false,
-          "description": "Указывает сколько колонок относятся к указанным параметрам.",
-          "examples": [
-            {
-              "title": "2",
-              "description": "Можно использовать только целые числа.",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-cite-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "col",
+    "category": "табличные",
+    "type": "строчные",
+    "self_closing": true,
+    "description": "<p>Элемент задает ширину и другие параметры у одной или нескольких колонок. Возможно использование с тегом <a href='/colgroup.html'>colgroup</a>, который позволяет группировать колонки таблицы с одинаковыми свойствами. Использование тега &lt;col&gt; позволяет браузеру отрисовывать таблицу, не дожидаясь загрузки страницы.</p><p>Для тега &lt;col&gt; для стилезации допустимо использовать только свойства: <strong>border</strong>, <strong>background</strong>, <strong>width</strong> и <strong>visibility</strong>.</p>",
+    "example": "<table>\n  <col background='red'>\n  <tr>\n    <td>...</td>\n  </tr>\n</table>",
+    "browsers": {
+      "ie": 5,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 4
     },
-    {
-      "name": "colgroup",
-      "category": "табличные",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p></p>",
-      "example": "",
-      "browsers": {
-        "ie": 1,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 1.3
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/tabular-data.html#the-col-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "",
-          "required": true,
-          "description": "",
-          "examples": [
-            {
-              "title": "",
-              "description": "",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "http://w3c.github.io/html/tabular-data.html#the-col-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/tables.html#h-11.2.4.2",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "span",
+        "required": false,
+        "description": "Указывает сколько колонок относятся к указанным параметрам.",
+        "examples": [
+          {
+            "title": "2",
+            "description": "Можно использовать только целые числа.",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "colgroup",
+    "category": "табличные",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p></p>",
+    "example": "",
+    "browsers": {
+      "ie": 1,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1.3
     },
-    {
-      "name": "data",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Содержит в аттрибуте <code>value</code> данные в машиночитаемом виде, используемом для внешних систем или для скриптов на самом сайте.</p>",
-      "example": "<data value='значение'>...</data>",
-      "browsers": {
-        "ie": false,
-        "ch": false,
-        "ff": 22,
-        "sa": false,
-        "op": false
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-data-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "https://w3c.github.io/html/textlevel-semantics.html#the-data-element",
-          "status": "WD"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "value",
-          "required": true,
-          "description": "Содержит машиночитаемые данные.",
-          "examples": [
-            {
-              "title": "123",
-              "description": "Вы можете указать данные в виде чисел"
-            },
-            {
-              "title": "Company name",
-              "description": "или в виде текстовой строки."
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "",
+        "required": true,
+        "description": "",
+        "examples": [
+          {
+            "title": "",
+            "description": "",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "data",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Содержит в аттрибуте <code>value</code> данные в машиночитаемом виде, используемом для внешних систем или для скриптов на самом сайте.</p>",
+    "example": "<data value='значение'>...</data>",
+    "browsers": {
+      "ie": false,
+      "ch": false,
+      "ff": 22,
+      "sa": false,
+      "op": false
     },
-    {
-      "name": "datalist",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Содержит в себе список данных для автоматических подсказок для текстовых полей <a href='/input.html'>input</a>. Данные в тектовом поле вызываются с помощью аттрибута <code>list</code>.</p>",
-      "example": "<input list='cities'>\n<datalist id='cities'>\n  <option value='Москва'>\n  <option value='Петербург'>\n</datalist>",
-      "browsers": {
-        "ie": 10,
-        "ch": 20,
-        "ff": 4,
-        "sa": false,
-        "op": 9.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-data-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.2",
-          "link": "https://w3c.github.io/html/sec-forms.html#the-datalist-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "https://w3c.github.io/html/textlevel-semantics.html#the-data-element",
+        "status": "WD"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "value",
+        "required": true,
+        "description": "Содержит машиночитаемые данные.",
+        "examples": [
+          {
+            "title": "123",
+            "description": "Вы можете указать данные в виде чисел"
+          },
+          {
+            "title": "Company name",
+            "description": "или в виде текстовой строки."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "datalist",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Содержит в себе список данных для автоматических подсказок для текстовых полей <a href='/input.html'>input</a>. Данные в тектовом поле вызываются с помощью аттрибута <code>list</code>.</p>",
+    "example": "<input list='cities'>\n<datalist id='cities'>\n  <option value='Москва'>\n  <option value='Петербург'>\n</datalist>",
+    "browsers": {
+      "ie": 10,
+      "ch": 20,
+      "ff": 4,
+      "sa": false,
+      "op": 9.5
     },
-    {
-      "name": "dd",
-      "category": "списки",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Тег &lt;dd&gt; является в списке описаний элементом, в котором содержится описание термина.</p>",
-      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dd-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-dd-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.2",
+        "link": "https://w3c.github.io/html/sec-forms.html#the-datalist-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "dd",
+    "category": "списки",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Тег &lt;dd&gt; является в списке описаний элементом, в котором содержится описание термина.</p>",
+    "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "del",
-      "category": "семантические",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>С помощью данного тега указывается часть текста, которая по какой-либо причине стала неактуальной, но удалять её нет необходимости. Чаще всего браузеры текст внутри данного тега отобразят как перечеркнутый.</p>",
-      "example": "Для написания аббревиатур используйте тег <del>acronym</del> abbr.",
-      "browsers": {
-        "ie": 4,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dd-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-del-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/edits.html#the-del-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.4",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "cite",
-          "description": "Содержит ссылку на документ, где указана причина изменения текста.",
-          "examples": [
-            {
-              "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
-              "description": "Можно использовать только действующие ссылки.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "datetime",
-          "description": "Содержит дату изменения текста.",
-          "examples": [
-            {
-              "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
-              "description": "Можно использовать только валидный <a href='https://html.spec.whatwg.org/multipage/infrastructure.html#valid-global-date-and-time-string' rel='nofollow'>формат дат</a>.",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-dd-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "del",
+    "category": "семантические",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>С помощью данного тега указывается часть текста, которая по какой-либо причине стала неактуальной, но удалять её нет необходимости. Чаще всего браузеры текст внутри данного тега отобразят как перечеркнутый.</p>",
+    "example": "Для написания аббревиатур используйте тег <del>acronym</del> abbr.",
+    "browsers": {
+      "ie": 4,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "details",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Этот тег позволяет создать разворачиваемый блок без использования JS, который содержит в себе краткое описание и подробное.</p>",
-      "example": "<details>\n  <summary>Подробнее</summary>\n  <p>Подробное описание, которое может быть скрыто.</p>\n</details>",
-      "browsers": {
-        "ie": "x",
-        "ed": "x",
-        "ch": 12,
-        "ff": 49,
-        "sa": 6,
-        "op": 15
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-del-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-details-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/interactive-elements.html#the-details-element",
-          "status": "WD"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Задает состояние элемента по умолчанию.",
-          "examples": [
-            {
-              "title": "true",
-              "description": "Элемент по умолчанию будет открыт.",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/edits.html#the-del-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.4",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "cite",
+        "description": "Содержит ссылку на документ, где указана причина изменения текста.",
+        "examples": [
+          {
+            "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
+            "description": "Можно использовать только действующие ссылки.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "datetime",
+        "description": "Содержит дату изменения текста.",
+        "examples": [
+          {
+            "title": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym",
+            "description": "Можно использовать только валидный <a href='https://html.spec.whatwg.org/multipage/infrastructure.html#valid-global-date-and-time-string' rel='nofollow'>формат дат</a>.",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "details",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Этот тег позволяет создать разворачиваемый блок без использования JS, который содержит в себе краткое описание и подробное.</p>",
+    "example": "<details>\n  <summary>Подробнее</summary>\n  <p>Подробное описание, которое может быть скрыто.</p>\n</details>",
+    "browsers": {
+      "ie": "x",
+      "ed": "x",
+      "ch": 12,
+      "ff": 49,
+      "sa": 6,
+      "op": 15
     },
-    {
-      "name": "dfn",
-      "category": "семантические",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>Данный тег служит для первичного объявления термина на веб-странице. Определение термина описывается в аттрибуте <code>title</code> тега или в таком же аттрибуте, но во вложенном теге <a href='/abbr.html'>abbr</a>.</p>",
-      "example": "<dfn>Всемирная паутина</dfn> является частью интернета, которая использует протокол HTTP.",
-      "browsers": {
-        "ie": 2,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-details-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dfn-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-dfn-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/interactive-elements.html#the-details-element",
+        "status": "WD"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "open",
+        "description": "Задает состояние элемента по умолчанию.",
+        "examples": [
+          {
+            "title": "true",
+            "description": "Элемент по умолчанию будет открыт.",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "dfn",
+    "category": "семантические",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>Данный тег служит для первичного объявления термина на веб-странице. Определение термина описывается в аттрибуте <code>title</code> тега или в таком же аттрибуте, но во вложенном теге <a href='/abbr.html'>abbr</a>.</p>",
+    "example": "<dfn>Всемирная паутина</dfn> является частью интернета, которая использует протокол HTTP.",
+    "browsers": {
+      "ie": 2,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "dialog",
-      "category": "экспериментальные",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Данный тег представляет собой диалоговое окно, в которое можно вставить люой текст, форму регистрации и т.д.</p>",
-      "example": "<dialog open>Какой-то текст</dialog>",
-      "browsers": {
-        "ie": "x",
-        "ch": 37,
-        "ff": "x",
-        "sa": "x",
-        "op": 24
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dfn-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/interactive-elements.html#the-dialog-element",
-          "status": "WD"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "open",
-          "required": "empty",
-          "description": "Если этот атрибут указан, модальное окно отображается, без него тег получает свойство display равное none."
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-dfn-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "dialog",
+    "category": "экспериментальные",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Данный тег представляет собой диалоговое окно, в которое можно вставить люой текст, форму регистрации и т.д.</p>",
+    "example": "<dialog open>Какой-то текст</dialog>",
+    "browsers": {
+      "ie": "x",
+      "ch": 37,
+      "ff": "x",
+      "sa": "x",
+      "op": 24
     },
-    {
-      "name": "div",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Элемент &lt;div&gt; является универсальным блочным элементом, который используется для группирования элементов для последующей их стилизации. Не обладает никаким семантическим значением.</p>",
-      "example": "<div>...</div>",
-      "browsers": {
-        "ie": 4,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-div-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-div-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.4",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/interactive-elements.html#the-dialog-element",
+        "status": "WD"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "open",
+        "required": "empty",
+        "description": "Если этот атрибут указан, модальное окно отображается, без него тег получает свойство display равное none."
+      }
+    ]
+  },
+  {
+    "name": "div",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Элемент &lt;div&gt; является универсальным блочным элементом, который используется для группирования элементов для последующей их стилизации. Не обладает никаким семантическим значением.</p>",
+    "example": "<div>...</div>",
+    "browsers": {
+      "ie": 4,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "dl",
-      "category": "списки",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Элемент &lt;dl&gt; объявляет список описаний. Является оберткой для элементов <a href='/dd.html'>dd</a> и <a href='/dt.html'>dt</a>.</p>",
-      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-div-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-dl-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-div-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.4",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "dl",
+    "category": "списки",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Элемент &lt;dl&gt; объявляет список описаний. Является оберткой для элементов <a href='/dd.html'>dd</a> и <a href='/dt.html'>dt</a>.</p>",
+    "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "dt",
-      "category": "списки",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>Элемент &lt;dt&gt; в списке описаний объявляет термин, который после описывается в элементе <a href='/dd.html'>dd</a>.</p>",
-      "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dt-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-dt-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-dl-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "dt",
+    "category": "списки",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>Элемент &lt;dt&gt; в списке описаний объявляет термин, который после описывается в элементе <a href='/dd.html'>dd</a>.</p>",
+    "example": "<dl>\n  <dt>Термин 1</dt>\n    <dd>Описание термина 1</dd>\n  <dt>Термин 2</dt>\n    <dd>Описание термина 2</dd>\n</dl>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "em",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "description": "<p>С помощью данного элемента указывается акцент на том или ином слове, варыжении. Браузер отображет текст в данном элементе курсивом.</p><p>Стоит отметить, что элементы &lt;em&gt; и &lt;i&gt; не являются одинаковыми по значению: &lt;i&gt; делает текст курсивным, а &lt;em&gt; - задает акцент на тексте внутри него.</p>",
-      "example": "<em>Какой-то текст</em>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-dt-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-em-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-em-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-dt-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/lists.html#h-10.3",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "em",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "description": "<p>С помощью данного элемента указывается акцент на том или ином слове, варыжении. Браузер отображет текст в данном элементе курсивом.</p><p>Стоит отметить, что элементы &lt;em&gt; и &lt;i&gt; не являются одинаковыми по значению: &lt;i&gt; делает текст курсивным, а &lt;em&gt; - задает акцент на тексте внутри него.</p>",
+    "example": "<em>Какой-то текст</em>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "embed",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": true,
-      "description": "<p>Данный элемент позволяет загрузить на веб-страницу сторонние ресурсы (видеоролики, флеш-ролики, аудио), которые браузер изначально не понимает.</p>",
-      "example": "<embed src='https://www.youtube.com/embed/xuDTJNbHO34'>",
-      "browsers": {
-        "ie": 3,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-em-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-embed-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-embed-element",
-          "status": "WD"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "src",
-          "description": "Путь к файлу.",
-          "examples": [
-            {
-              "title": "https://www.youtube.com/embed/xuDTJNbHO34",
-              "description": "",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "type",
-          "description": "MIME-тип файла.",
-          "examples": [
-            {
-              "title": "mpeg",
-              "description": "Можно использовать только допустимые <a href='http://www.iana.org/assignments/media-types/media-types.xhtml' rel='nofollow'>MIME-типы</a>.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "width",
-          "description": "Указывается ширина контейнера файла.",
-          "examples": [
-            {
-              "title": "640",
-              "description": "Величина в пикселях.",
-              "example": "",
-              "default": false
-            }
-          ]
-        },
-        {
-          "name": "height",
-          "description": "Указывается высота контейнера файла.",
-          "examples": [
-            {
-              "title": "480",
-              "description": "Величина в пикселях.",
-              "example": "",
-              "default": false
-            }
-          ]
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-em-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/struct/text.html#h-9.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "embed",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": true,
+    "description": "<p>Данный элемент позволяет загрузить на веб-страницу сторонние ресурсы (видеоролики, флеш-ролики, аудио), которые браузер изначально не понимает.</p>",
+    "example": "<embed src='https://www.youtube.com/embed/xuDTJNbHO34'>",
+    "browsers": {
+      "ie": 3,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "fieldset",
-      "category": "формы",
-      "type": "блочные",
-      "self_closing": false,
-      "description": "<p>С помощью элемента &lt;fieldset&gt; можно группировать элементы формы. С помощью такой группировки элементов можно применять общую стилизацию к блоку или для удобства чтения кода, особенно в больших формах.</p><p>В браузерах группа элементов формы в элементе &lt;fieldset&gt; обрамляется рамкой, которую можно стилизовать.</p>",
-      "example": "<form>\n  <fieldset>...</fieldset>\n</form>",
-      "browsers": {
-        "ie": 4,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 6
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-embed-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sec-forms.html#the-fieldset-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4.01",
-          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.10",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "disabled",
-          "description": "Делает неактивными все элементы формы внутри себя.",
-          "required": "empty"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-embed-element",
+        "status": "WD"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "src",
+        "description": "Путь к файлу.",
+        "examples": [
+          {
+            "title": "https://www.youtube.com/embed/xuDTJNbHO34",
+            "description": "",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "type",
+        "description": "MIME-тип файла.",
+        "examples": [
+          {
+            "title": "mpeg",
+            "description": "Можно использовать только допустимые <a href='http://www.iana.org/assignments/media-types/media-types.xhtml' rel='nofollow'>MIME-типы</a>.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "width",
+        "description": "Указывается ширина контейнера файла.",
+        "examples": [
+          {
+            "title": "640",
+            "description": "Величина в пикселях.",
+            "example": "",
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "height",
+        "description": "Указывается высота контейнера файла.",
+        "examples": [
+          {
+            "title": "480",
+            "description": "Величина в пикселях.",
+            "example": "",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fieldset",
+    "category": "формы",
+    "type": "блочные",
+    "self_closing": false,
+    "description": "<p>С помощью элемента &lt;fieldset&gt; можно группировать элементы формы. С помощью такой группировки элементов можно применять общую стилизацию к блоку или для удобства чтения кода, особенно в больших формах.</p><p>В браузерах группа элементов формы в элементе &lt;fieldset&gt; обрамляется рамкой, которую можно стилизовать.</p>",
+    "example": "<form>\n  <fieldset>...</fieldset>\n</form>",
+    "browsers": {
+      "ie": 4,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 6
     },
-    {
-      "name": "figcaption",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Элемент &lt;figcaption&gt; содержит описание для элемента <a href='/figure.html'>&lt;figure&gt;</a>.</p>",
-      "example": "<figure>\n  <figcaption>Какое-то описание</figcaption>\n</figure>",
-      "browsers": {
-        "ie": 9,
-        "ed": 12,
-        "ch": 5,
-        "ff": 4,
-        "sa": 5.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figcaption-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-figcaption-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sec-forms.html#the-fieldset-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4.01",
+        "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.10",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "disabled",
+        "description": "Делает неактивными все элементы формы внутри себя.",
+        "required": "empty"
+      }
+    ]
+  },
+  {
+    "name": "figcaption",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Элемент &lt;figcaption&gt; содержит описание для элемента <a href='/figure.html'>&lt;figure&gt;</a>.</p>",
+    "example": "<figure>\n  <figcaption>Какое-то описание</figcaption>\n</figure>",
+    "browsers": {
+      "ie": 9,
+      "ed": 12,
+      "ch": 5,
+      "ff": 4,
+      "sa": 5.1,
+      "op": 11.10
     },
-    {
-      "name": "figure",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Элемент &lt;figure&gt; служит для группировния элементов, как правило, изображений и подписей к ним. Данный тег является обособленной частью контента, что значит, если вы перенесете его в другую часть страницы, смысл содержимого не должен измениться.</p>",
-      "example": "<figure>\n  ...\n</figure>",
-      "browsers": {
-        "ie": 9,
-        "ed": 12,
-        "ch": 5,
-        "ff": 4,
-        "sa": 5.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figcaption-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figure-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-figure-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-figcaption-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "figure",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Элемент &lt;figure&gt; служит для группировния элементов, как правило, изображений и подписей к ним. Данный тег является обособленной частью контента, что значит, если вы перенесете его в другую часть страницы, смысл содержимого не должен измениться.</p>",
+    "example": "<figure>\n  ...\n</figure>",
+    "browsers": {
+      "ie": 9,
+      "ed": 12,
+      "ch": 5,
+      "ff": 4,
+      "sa": 5.1,
+      "op": 11.10
     },
-    {
-      "name": "footer",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "description": "<p>Элемент &lt;footer&gt; используется для объявления \"подвальной\" части страницы, либо семантического блока. Не может быть вложен внутрь другого элемента &lt;footer&gt;, &lt;address&gt;, &lt;header&gt;</p><p>Внутри элемента &lt;footer&gt; не может находиться элемент &lt;main&gt;.</p>",
-      "example": "<footer>\n  ...\n</footer>",
-      "browsers": {
-        "ie": 9,
-        "ed": 12,
-        "ch": 5,
-        "ff": 4,
-        "sa": 5.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-figure-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-footer-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-figure-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "footer",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "description": "<p>Элемент &lt;footer&gt; используется для объявления \"подвальной\" части страницы, либо семантического блока. Не может быть вложен внутрь другого элемента &lt;footer&gt;, &lt;address&gt;, &lt;header&gt;</p><p>Внутри элемента &lt;footer&gt; не может находиться элемент &lt;main&gt;.</p>",
+    "example": "<footer>\n  ...\n</footer>",
+    "browsers": {
+      "ie": 9,
+      "ed": 12,
+      "ch": 5,
+      "ff": 4,
+      "sa": 5.1,
+      "op": 11.10
     },
-    {
-      "name": "form",
-      "category": "формы",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<form>\n  ...\n</form>",
-      "browsers": {
-        "ie": 3,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 3.5
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sec-forms.html#the-form-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.3",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "accept-charset",
-          "description": "Указывается кодировка, в которой сервер может принимать данные."
-        },
-        {
-          "name": "action",
-          "description": "Указывается адрес, где обрабатываются данные с формы."
-        },
-        {
-          "name": "autocomplete",
-          "description": "Активирует автозаполнение полей формы."
-        },
-        {
-          "name": "enctype",
-          "description": "Указывается способ кодирования данных формы."
-        },
-        {
-          "name": "method",
-          "description": "Указывается метод протокола HTTP."
-        },
-        {
-          "name": "name",
-          "description": "Название формы."
-        },
-        {
-          "name": "novalidate",
-          "description": "Отменяет встроенную валидацию на корректность введенных данных."
-        },
-        {
-          "name": "target",
-          "description": "Имя окна или фрейма, куда обработчик загрузит результат."
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-footer-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "form",
+    "category": "формы",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<form>\n  ...\n</form>",
+    "browsers": {
+      "ie": 3,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 3.5
     },
-    {
-      "name": "h1",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h1>Самый главный заголовок</h1>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sec-forms.html#the-form-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.3",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "accept-charset",
+        "description": "Указывается кодировка, в которой сервер может принимать данные."
+      },
+      {
+        "name": "action",
+        "description": "Указывается адрес, где обрабатываются данные с формы."
+      },
+      {
+        "name": "autocomplete",
+        "description": "Активирует автозаполнение полей формы."
+      },
+      {
+        "name": "enctype",
+        "description": "Указывается способ кодирования данных формы."
+      },
+      {
+        "name": "method",
+        "description": "Указывается метод протокола HTTP."
+      },
+      {
+        "name": "name",
+        "description": "Название формы."
+      },
+      {
+        "name": "novalidate",
+        "description": "Отменяет встроенную валидацию на корректность введенных данных."
+      },
+      {
+        "name": "target",
+        "description": "Имя окна или фрейма, куда обработчик загрузит результат."
+      }
+    ]
+  },
+  {
+    "name": "h1",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h1>Самый главный заголовок</h1>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "h2",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h2>Заголовок второго уровня</h2>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "h2",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h2>Заголовок второго уровня</h2>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "h3",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h3>Заголовок третьего уровня</h3>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "h3",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h3>Заголовок третьего уровня</h3>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "h4",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h4>Заголовок четвертого уровня</h4>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "h4",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h4>Заголовок четвертого уровня</h4>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "h5",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h5>Заголовок пятого уровня</h5>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "h5",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h5>Заголовок пятого уровня</h5>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "h6",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<h6>Заголовок шестого уровня</h6>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "h6",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<h6>Заголовок шестого уровня</h6>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "head",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<head>\n  <!-- Метаданные страницы -->\n</head>",
-      "browsers": {
-        "ie": 1,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 1
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/document-metadata.html#the-head-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.4.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.5.5",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "head",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<head>\n  <!-- Метаданные страницы -->\n</head>",
+    "browsers": {
+      "ie": 1,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1
     },
-    {
-      "name": "header",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": true,
-      "example": "<header>\n  ...\n</header>",
-      "browsers": {
-        "ie": 9,
-        "ed": 12,
-        "ch": 5,
-        "ff": 4,
-        "sa": 4.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-header-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://www.w3.org/TR/html5/sections.html#the-header-element",
-          "status": "WD"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/document-metadata.html#the-head-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.4.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "header",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": true,
+    "example": "<header>\n  ...\n</header>",
+    "browsers": {
+      "ie": 9,
+      "ed": 12,
+      "ch": 5,
+      "ff": 4,
+      "sa": 4.1,
+      "op": 11.10
     },
-    {
-      "name": "hgroup",
-      "category": "семантические",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<hgroup>\n  ...\n</hgroup>",
-      "browsers": {
-        "ie": 9,
-        "ed": 12,
-        "ch": 5,
-        "ff": 4,
-        "sa": 4.1,
-        "op": 11.10
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-header-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hgroup-element",
-          "status": "LS"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://www.w3.org/TR/html5/sections.html#the-header-element",
+        "status": "WD"
+      }
+    ]
+  },
+  {
+    "name": "hgroup",
+    "category": "семантические",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<hgroup>\n  ...\n</hgroup>",
+    "browsers": {
+      "ie": 9,
+      "ed": 12,
+      "ch": 5,
+      "ff": 4,
+      "sa": 4.1,
+      "op": 11.10
     },
-    {
-      "name": "hr",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": true,
-      "html5": false,
-      "example": "<hr>",
-      "browsers": {
-        "ie": 3,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
-      },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/grouping-content.html#the-hr-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.3",
-          "status": "RC"
-        }
-      ]
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hgroup-element",
+        "status": "LS"
+      }
+    ]
+  },
+  {
+    "name": "hr",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": true,
+    "html5": false,
+    "example": "<hr>",
+    "browsers": {
+      "ie": 3,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "html",
-      "category": "базовые",
-      "type": "блочные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<html>\n  ...\n</html>",
-      "browsers": {
-        "ie": 1,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 1
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/semantics.html#the-html-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.3",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/grouping-content.html#the-hr-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.3",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "html",
+    "category": "базовые",
+    "type": "блочные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<html>\n  ...\n</html>",
+    "browsers": {
+      "ie": 1,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1
     },
-    {
-      "name": "i",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<i>\n  ...\n</i>",
-      "browsers": {
-        "ie": 2,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 2
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-i-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/textlevel-semantics.html#the-i-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
-          "status": "RC"
-        }
-      ]
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/semantics.html#the-html-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/global.html#h-7.3",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "i",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<i>\n  ...\n</i>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
     },
-    {
-      "name": "iframe",
-      "category": "базовые",
-      "type": "строчные",
-      "self_closing": false,
-      "html5": false,
-      "example": "<iframe>\n  ...\n</iframe>",
-      "browsers": {
-        "ie": 4,
-        "ed": 12,
-        "ch": 1,
-        "ff": 1,
-        "sa": 1,
-        "op": 4
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/semantics.html#the-i-element",
+        "status": "LS"
       },
-      "refs": [
-        {
-          "name": "WHATWG HTML Living Standard",
-          "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element",
-          "status": "LS"
-        },
-        {
-          "name": "w3 HTML5.3",
-          "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-iframe-element",
-          "status": "WD"
-        },
-        {
-          "name": "w3 HTML4",
-          "link": "http://www.w3.org/TR/html401/present/frames.html#h-16.5",
-          "status": "RC"
-        }
-      ],
-      "attributes": [
-        {
-          "name": "src",
-          "description": "Указывается путь до документа, который будет отображаться во фрейме.",
-          "required": true
-        },
-        {
-          "name": "allowfullscreen",
-          "description": "Разрешает для фрейма полноэкранный режим."
-        },
-        {
-          "name": "height",
-          "description": "Задает высоту фрейма.",
-          "examples": [
-            {
-              "title": "150",
-              "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
-              "example": "100",
-              "default": true
-            }
-          ]
-        },
-        {
-          "name": "name",
-          "description": "Название фрейма."
-        },
-        {
-          "name": "sandbox",
-          "description": "Используется для установки ограничений на загружаемый контент.",
-          "examples": [
-            {
-              "title": "(нет значения)",
-              "description": "Снятие всех ограничений."
-            },
-            {
-              "title": "allow-forms",
-              "description": "Разрешение на отправку форм из фрейма."
-            },
-            {
-              "title": "allow-modals",
-              "description": "Разрешение на открытие системных модальных окон (alert, promt и тд.)."
-            },
-            {
-              "title": "allow-orientation-lock",
-              "description": "Разрешение на блокировку поворота экрана."
-            },
-            {
-              "title": "allow-pointer-lock",
-              "description": "Разрешение на использование Pointer Lock API."
-            },
-            {
-              "title": "allow-popups",
-              "description": "Разрешение на использование всплывающих окон (window.open, target='_blank' и т.д.)."
-            },
-            {
-              "title": "allow-presentation",
-              "description": "Разрешение на использование Presentation API."
-            },
-            {
-              "title": "allow-same-origin",
-              "description": "Позволяет отображать содержимое фрейма как пренадлежащее к тому же хосту, что и активная веб-страница."
-            },
-            {
-              "title": "allow-scripts",
-              "description": "Разрешение на запуск и выполнение скриптов из фрейма. Создание всплывающих окон не разрешает."
-            },
-            {
-              "title": "allow-top-navigation",
-              "description": "Разрешение на открытие ссылок из фрейма в активной веб-странице."
-            }
-          ]
-        },
-        {
-          "name": "scrolling",
-          "description": "Задает способ прокрутки фрейма.",
-          "examples": [
-            {
-              "title": "auto",
-              "description": "Прокрутка добавляется браузером только по необходимости.",
-              "default": true
-            },
-            {
-              "title": "yes",
-              "description": "Прокрутка отображается всегда, независимо от объема информации."
-            },
-            {
-              "title": "no",
-              "description": "Запрет на прокрутку."
-            }
-          ]
-        },
-        {
-          "name": "srcdoc",
-          "description": "Хранит всю разметку фрейма в аттрибуте. Имеет преимущество перед аттрибутом src."
-        },
-        {
-          "name": "width",
-          "description": "Задает ширину фрейма.",
-          "examples": [
-            {
-              "title": "350",
-              "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
-              "default": true
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/textlevel-semantics.html#the-i-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/present/graphics.html#h-15.2.1",
+        "status": "RC"
+      }
+    ]
+  },
+  {
+    "name": "iframe",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": false,
+    "html5": false,
+    "example": "<iframe>\n  ...\n</iframe>",
+    "browsers": {
+      "ie": 4,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 4
+    },
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element",
+        "status": "LS"
+      },
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-iframe-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/present/frames.html#h-16.5",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "src",
+        "description": "Указывается путь до документа, который будет отображаться во фрейме.",
+        "required": true
+      },
+      {
+        "name": "allowfullscreen",
+        "description": "Разрешает для фрейма полноэкранный режим."
+      },
+      {
+        "name": "height",
+        "description": "Задает высоту фрейма.",
+        "examples": [
+          {
+            "title": "150",
+            "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
+            "example": "100",
+            "default": true
+          }
+        ]
+      },
+      {
+        "name": "name",
+        "description": "Название фрейма."
+      },
+      {
+        "name": "sandbox",
+        "description": "Используется для установки ограничений на загружаемый контент.",
+        "examples": [
+          {
+            "title": "(нет значения)",
+            "description": "Снятие всех ограничений."
+          },
+          {
+            "title": "allow-forms",
+            "description": "Разрешение на отправку форм из фрейма."
+          },
+          {
+            "title": "allow-modals",
+            "description": "Разрешение на открытие системных модальных окон (alert, promt и тд.)."
+          },
+          {
+            "title": "allow-orientation-lock",
+            "description": "Разрешение на блокировку поворота экрана."
+          },
+          {
+            "title": "allow-pointer-lock",
+            "description": "Разрешение на использование Pointer Lock API."
+          },
+          {
+            "title": "allow-popups",
+            "description": "Разрешение на использование всплывающих окон (window.open, target='_blank' и т.д.)."
+          },
+          {
+            "title": "allow-presentation",
+            "description": "Разрешение на использование Presentation API."
+          },
+          {
+            "title": "allow-same-origin",
+            "description": "Позволяет отображать содержимое фрейма как пренадлежащее к тому же хосту, что и активная веб-страница."
+          },
+          {
+            "title": "allow-scripts",
+            "description": "Разрешение на запуск и выполнение скриптов из фрейма. Создание всплывающих окон не разрешает."
+          },
+          {
+            "title": "allow-top-navigation",
+            "description": "Разрешение на открытие ссылок из фрейма в активной веб-странице."
+          }
+        ]
+      },
+      {
+        "name": "scrolling",
+        "description": "Задает способ прокрутки фрейма.",
+        "examples": [
+          {
+            "title": "auto",
+            "description": "Прокрутка добавляется браузером только по необходимости.",
+            "default": true
+          },
+          {
+            "title": "yes",
+            "description": "Прокрутка отображается всегда, независимо от объема информации."
+          },
+          {
+            "title": "no",
+            "description": "Запрет на прокрутку."
+          }
+        ]
+      },
+      {
+        "name": "srcdoc",
+        "description": "Хранит всю разметку фрейма в аттрибуте. Имеет преимущество перед аттрибутом src."
+      },
+      {
+        "name": "width",
+        "description": "Задает ширину фрейма.",
+        "examples": [
+          {
+            "title": "350",
+            "description": "Значение указывается в пикселях или процентах. Простое число приравнивается к пикселям.",
+            "default": true
+          }
+        ]
+      }
+    ]
+  }
+]

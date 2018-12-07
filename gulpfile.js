@@ -54,7 +54,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('indexing', function () {
-	tags = JSON.parse(fs.readFileSync(path.src.tags)).tags;
+	tags = JSON.parse(fs.readFileSync(path.src.tags));
 	
 	tags.forEach(function (tag, index) {
 		var filePath = path.src.descriptions + tag.name +'.html';
