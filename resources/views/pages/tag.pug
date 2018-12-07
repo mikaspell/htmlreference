@@ -31,7 +31,7 @@ block content
         section#references.four.columns
           if(refs)
             h5 Стандарты:
-            table.u-full-width.table--refs
+            table.u-full-width.table--refs(cellspacing="0")
               //thead
               //  tr
               //    th Ресурс
@@ -65,7 +65,7 @@ block content
     .row
       section#attributes.twelve.columns
         h5 Атрибуты:
-        table.u-full-width.table--attrs
+        table.u-full-width.table--attrs(cellspacing="0")
           each attr in attributes
             tr
               td

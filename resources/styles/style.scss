@@ -49,7 +49,7 @@ main {
 
 #supports {
   background-color: #eee;
-  padding-top: 15px;
+  padding: 15px 15px 5px;
   margin-top: 30px;
 
   h5 {
@@ -112,7 +112,7 @@ main {
 
     a {
 
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
 
@@ -150,6 +150,11 @@ table {
 
       td:first-of-type {
         width: 30%;
+        vertical-align: baseline;
+
+        p {
+          margin-bottom: 0;
+        }
       }
 
       td:nth-child(even) div:last-of-type .attribute-example {
