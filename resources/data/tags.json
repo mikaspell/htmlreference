@@ -2101,7 +2101,7 @@
   {
     "name": "iframe",
     "category": "базовые",
-    "type": "строчные",
+    "type": "блочные",
     "self_closing": false,
     "html5": false,
     "example": "<iframe>\n  ...\n</iframe>",
