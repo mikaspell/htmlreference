@@ -19,11 +19,10 @@ $container-width: 980px;
 @import "partials/system/fonts";
 
 body {
-  font-family: 'UbuntuRegular', sans-serif;
+  font-family: 'Fira Sans Condensed R', 'UbuntuRegular', sans-serif;
 }
 
 .banner-zone {
-
   background: $light-grey;
   padding-top: 100px;
   padding-bottom: 20px;
