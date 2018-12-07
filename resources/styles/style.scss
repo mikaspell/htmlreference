@@ -1,4 +1,5 @@
 /* Skeleton Base files. */
+$container-width: 980px;
 @import "../bower_components/Skeleton-Sass/scss/base/variables";
 @import "../bower_components/Skeleton-Sass/scss/base/functions";
 @import "../bower_components/Skeleton-Sass/scss/base/base-styles";
@@ -17,6 +18,10 @@
 
 @import "partials/system/fonts";
 
+body {
+  font-family: 'UbuntuRegular', sans-serif;
+}
+
 .banner-zone {
 
   background: $light-grey;
@@ -26,6 +31,42 @@
 
 main {
   margin-top: 70px;
+
+  section {
+    padding: 0 10px;
+
+    &#description{
+      padding-right: 0;
+    }
+    &#references {
+      padding-left: 0;
+    }
+  }
+
+  table {
+    margin-bottom: 0;
+  }
+}
+
+#supports {
+  background-color: #eee;
+  padding-top: 15px;
+  margin-top: 30px;
+
+  h5 {
+    padding-left: 10px;
+  }
+}
+
+#comments {
+  display: none;
+  margin-top: 30px;
+}
+
+.no-last-border {
+  tr:last-of-type td {
+    border-bottom: none;
+  }
 }
 
 #tag_filter {
@@ -196,11 +237,6 @@ code {
   &--empty {
     margin-bottom: 0;
   }
-}
-
-#comments {
-  display: none;
-  margin-top: 50px;
 }
 
 #last-edited {
