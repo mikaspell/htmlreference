@@ -57,7 +57,7 @@ gulp.task('indexJSON', function () {
 	tags = JSON.parse(fs.readFileSync(path.src.tags));
 });
 
-gulp.task('indexDESCS', ['indexJSON'], function () {
+gulp.task('indexDESCS', function () {
 	tags.forEach(function (tag, index) {
 		var filePath = path.src.descriptions + tag.name +'.html';
 		var isExistFilePath = fs.existsSync(filePath);
@@ -70,9 +70,8 @@ gulp.task('indexDESCS', ['indexJSON'], function () {
 	});
 });
 
-
 // Запуск компиляции HTML
-gulp.task('html', ['indexJSON'], function() {
+gulp.task('html', function() {
 
   return gulp.src(path.src.html)
     .pipe(plumber())
@@ -86,7 +85,7 @@ gulp.task('html', ['indexJSON'], function() {
     .pipe(gulp.dest(path.build.html));
 });
 
-gulp.task('tags_page', ['indexDESCS'], function () {
+gulp.task('tags_page', function () {
 
   tags.forEach(function(tag, index) {
 	  if(!tag.description) tag.description = cache[index];
@@ -155,14 +154,20 @@ gulp.task('copy', function () {
 });
 
 // Наблюдение за изменением файлов
-gulp.task('default', ['localserver'], function() {
+gulp.task('default', ['localserver', 'indexJSON', 'indexDESCS'], function() {
 
 	watch(path.watch.html, function () {
 		gulp.start('html', 'tags_page');
 	});
-  watch([path.src.tags, path.watch.descriptions], function(event, cb) {
-    gulp.start('tags_page');
-  });
+	
+	watch(path.src.tags, function () {
+		gulp.start('indexJSON', 'indexDESCS', 'html', 'tags_page');
+	});
+	
+	watch(path.watch.descriptions, function () {
+		gulp.start('indexDESCS', 'tags_page');
+	});
+	
   watch(path.watch.css, function(event, cb) {
     gulp.start('css');
   });
