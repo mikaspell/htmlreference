@@ -71,11 +71,13 @@ block content
               td
                 strong(style=attr.required && attr.required !== "empty" ? "color:red": '')= attr.name
                 if(attr.required && attr.required !== "empty")
-                  span.required(title="Обязательный атрибут!")
+                  i.fa.fa-exclamation-circle(title="Обязательный атрибут!")
+                if(attr.html5)
+                  i.fa.fa-html5
                 if(attr.description)
                   p= attr.description
                 if(attr.required === "empty")
-                  p.attribute--empty Значение не указывается
+                  p.attribute--empty Значение не указывается.
               td
                 if(attr.examples)
                   each example in attr.examples
