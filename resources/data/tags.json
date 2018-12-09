@@ -2237,5 +2237,98 @@
         ]
       }
     ]
+  },
+  {
+    "name": "img",
+    "category": "базовые",
+    "type": "строчные",
+    "self_closing": true,
+    "html5": false,
+    "example": "<i src='some.jpg' alt='текст'>",
+    "browsers": {
+      "ie": 1,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 2
+    },
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "status": "LS"
+      },
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/semantics-embedded-content.html#the-img-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/struct/objects.html#h-13.2",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "alt",
+        "description": "Альтернативный текст для изображения.",
+        "required": true
+      },
+      {
+        "name": "height",
+        "description": "Высота изображения."
+      },
+      {
+        "name": "ismap",
+        "description": "Атрибут сообщает браузеру, что данное изображение является серверной картой-изображением.",
+        "required": "empty"
+      },
+      {
+        "name": "sizes",
+        "description": "Задает размеры изображения для разных размеров страницы.",
+        "html5": true,
+        "examples": [
+          {
+            "title": "100wv",
+            "description": "vw — это ширина в процентах от области просмотра. В качестве значений можно использовать единицы em, ex, ch, rem, vw, vh, vmin, vmax, cm, mm, q, in, pc, pt, px, однако, не проценты."
+          },
+          {
+            "title": "(min-width: 680px) 100px",
+            "description": "Задание размера при помощт медиа-запроса."
+          },
+          {
+            "title": "(max-width: 680px) 100px, (max-width: 960px) 200px, calc(55em - 150px)",
+            "description": "Медиа-запросы и значения можно указывать через запятую. Можно также использовать функцию calc()."
+          }
+        ]
+      },{
+        "name": "src",
+        "description": "Путь до изображения.",
+        "required": true
+      },{
+        "name": "srcset",
+        "description": "Пути до разных изображений с учетом их размеров и размеров страницы.",
+        "examples": [
+          {
+            "title": "some-2x.jpg 200w",
+            "description": "Указывается путь до изображения, размер страницы."
+          },
+          {
+            "title": "some-2x.jpg 2x",
+            "description": "Указывается путь до изображения, размер плотности пикселей."
+          }
+        ]
+      },
+      {
+        "name": "width",
+        "description": "Ширина изображения."
+      },
+      {
+        "name": "usemap",
+        "description": "Связывает между собой изображение и карту-изображение, которая задается при помощи элемента map."
+      }
+    ]
   }
 ]
