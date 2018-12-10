@@ -255,3 +255,39 @@ code {
     font-size: 1.2rem !important;
   }
 }
+
+.pager {
+  padding: 0;
+  margin-top: 30px;
+
+  &-item {
+    display: block;
+    width: 50%;
+    padding: 3px 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover, &:active {
+      background-color: #fbfbfb;
+    }
+
+    &--previous {
+      float: left;
+      padding-left: 20px;
+
+      .fa {
+        padding-right: 10px;
+      }
+    }
+
+    &--next {
+      float: right;
+      padding-right: 20px;
+      text-align: right;
+
+      .fa {
+        padding-left: 10px;
+      }
+    }
+  }
+}
