@@ -62,10 +62,10 @@ gulp.task('indexDESCS', function () {
 		var filePath = path.src.descriptions + tag.name +'.html';
 		var isExistFilePath = fs.existsSync(filePath);
 		
-		if(!tag.description) {
-			if(!isExistFilePath) fs.appendFileSync(filePath, '<p>Описания пока нет...</p>', 'utf8');
-			
-			cache[index] = fs.readFileSync(filePath, 'utf8');
+		if(!tag.description && !isExistFilePath) {
+			fs.appendFileSync(filePath, '<p>Описания элемента &lt;'+ tag.name +'&gt; пока нет...</p>', 'utf8');
+		} else if(isExistFilePath) {
+			tags[index].description = fs.readFileSync(filePath, 'utf8');
 		}
 	});
 });
@@ -88,7 +88,8 @@ gulp.task('html', function() {
 gulp.task('tags_page', function () {
 
   tags.forEach(function(tag, index) {
-	  if(!tag.description) tag.description = cache[index];
+	  if(index) tag.prev = tags[index - 1].name;
+	  if(index !== tags.length - 1) tag.next = tags[index + 1].name;
 	  
 	  gulp.src('resources/views/pages/tag.pug')
 		  .pipe(pug({
@@ -180,4 +181,4 @@ gulp.task('default', ['localserver', 'indexJSON', 'indexDESCS'], function() {
 });
 
 // Выполнение всех тасков по порядку
-gulp.task('build', sequence('clean', 'html', ['tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
+gulp.task('build', sequence('clean', 'indexJSON', 'indexDESCS', ['html', 'tags_page', 'css'], 'js', 'image', 'vendors', 'copy'));
