@@ -2251,7 +2251,7 @@
       "ch": 1,
       "ff": 1,
       "sa": 1,
-      "op": 2
+      "op": 1
     },
     "refs": [
       {
@@ -2328,6 +2328,82 @@
       {
         "name": "usemap",
         "description": "Связывает между собой изображение и карту-изображение, которая задается при помощи элемента map."
+      }
+    ]
+  },
+  {
+    "name": "input",
+    "category": "формы",
+    "type": "строчные",
+    "self_closing": true,
+    "html5": false,
+    "example": "<input type='text' name='some name' value='some value'>",
+    "browsers": {
+      "ie": 2,
+      "ed": 12,
+      "ch": 1,
+      "ff": 1,
+      "sa": 1,
+      "op": 1
+    },
+    "refs": [
+      {
+        "name": "WHATWG HTML Living Standard",
+        "link": "https://html.spec.whatwg.org/multipage/forms.html#the-input-element",
+        "status": "LS"
+      },
+      {
+        "name": "w3 HTML5.3",
+        "link": "http://w3c.github.io/html/sec-forms.html#the-input-element",
+        "status": "WD"
+      },
+      {
+        "name": "w3 HTML4",
+        "link": "http://www.w3.org/TR/html401/interact/forms.html#h-17.4",
+        "status": "RC"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "accept",
+        "description": "С помощью данного атрибута указываются разрешенные к отправке форматы файлов (для type='file')."
+      },
+      {
+        "name": "alt",
+        "description": "Альтернативный текст для кнопки с изображением."
+      },
+      {
+        "name": "autocomplete",
+        "description": "Включение или отключение автозаполнения.",
+        "html5": true
+      },
+      {
+        "name": "autofocus",
+        "description": "Устанавливает фокус на элемент при загрузке web-страницы.",
+        "html5": true
+      },
+      {
+        "name": "checked",
+        "description": "Предварительно активированный элемент (для type='checkbox|radio')."
+      },
+      {
+        "name": "dirname",
+        "description": "Используется для указания направления текста.",
+        "html5": true
+      },
+      {
+        "name": "disabled",
+        "description": "Блокировка доступа к элементу и его изменению."
+      },
+      {
+        "name": "form",
+        "description": "Связывает элемент с формой по её идентификатору.",
+        "html5": true
+      },
+      {
+        "name": "formaction",
+        "description": "Указывается адрес обработчика формы.",
+        "html5": true
       }
     ]
   }
